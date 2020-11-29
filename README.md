@@ -68,6 +68,44 @@ cd examples/elk/docker/elk-local
 docker-compose up -d
 ```
 
+### Using Kubernetes
+
+#### Elastic Cloud on Kubernetes
+
+- Intro - https://www.elastic.co/elastic-cloud-kubernetes
+- Docs / Tutorial - https://www.elastic.co/guide/en/cloud-on-k8s/current/index.html
+- Github - https://github.com/elastic/cloud-on-k8s
+
+#### Setup
+
+```
+kubectl apply -f https://download.elastic.co/downloads/eck/1.3.0/all-in-one.yaml
+```
+
+#### Install Elasticsearch & Kibana
+
+```
+kubectl apply -f ./k8s/ns-elk-single-node.yml
+kubectl apply -f ./k8s/elk-single-node
+```
+
+Wait until Elasticsearch and Kibana will be GREEN
+
+```
+kubectl get -f ./k8s/elk-single-node
+```
+
+Get password for user `elastic`
+
+```
+kubectl get secret main-es-elastic-user -o=jsonpath='{.data.elastic}' | base64 --decode; echo
+```
+
+See:
+
+- https://es.k8s.sikademo.com
+- https://lb.k8s.sikademo.com
+
 ## Filebeat
 
 [Docs](https://www.elastic.co/downloads/beats/filebeat) | [Quick Start Installation](https://www.elastic.co/guide/en/beats/filebeat/7.10/filebeat-installation-configuration.html#installation)

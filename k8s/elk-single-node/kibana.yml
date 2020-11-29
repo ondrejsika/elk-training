@@ -1,0 +1,14 @@
+apiVersion: kibana.k8s.elastic.co/v1
+kind: Kibana
+metadata:
+  name: main
+  namespace: elk-single-node
+spec:
+  version: 7.10.0
+  count: 1
+  elasticsearchRef:
+    name: main
+  http:
+    tls:
+      selfSignedCertificate:
+        disabled: true

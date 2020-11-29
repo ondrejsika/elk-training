@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: main
+spec:
+  rules:
+    - host: es.k8s.sikademo.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: main-es-http
+                port:
+                  number: 9200
+    - host: kb.k8s.sikademo.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: main-kb-http
+                port:
+                  number: 5601
