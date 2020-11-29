@@ -32,6 +32,18 @@ For sharing links & "secrets".
 
 TODO: Course content
 
+## Install
+
+## Filebeat
+
+[Docs](https://www.elastic.co/downloads/beats/filebeat)
+
+### Mac
+
+```
+brew install elastic/tap/filebeat-full
+```
+
 ## Thank you! & Questions?
 
 That's it. Do you have any questions? **Let's go for a beer!**
