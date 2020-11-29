@@ -38,6 +38,17 @@ TODO: Course content
 
 ## Install
 
+## Elasticsearch & Kibana
+
+### Using Docker
+
+Simple single node installation for development
+
+```
+cd examples/elk/docker/elk-local
+docker-compose up -d
+```
+
 ## Filebeat
 
 [Docs](https://www.elastic.co/downloads/beats/filebeat)
