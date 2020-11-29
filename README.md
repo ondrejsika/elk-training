@@ -5,6 +5,10 @@
     Ondrej Sika <ondrej@ondrejsika.com>
     https://github.com/ondrejsika/elk-training
 
+## Related repositories
+
+- Loggen - https://github.com/ondrejsika/loggen
+
 ## Course
 
 ## About Me - Ondrej Sika
