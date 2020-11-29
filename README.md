@@ -70,12 +70,19 @@ docker-compose up -d
 
 ## Filebeat
 
-[Docs](https://www.elastic.co/downloads/beats/filebeat)
+[Docs](https://www.elastic.co/downloads/beats/filebeat) | [Quick Start Installation](https://www.elastic.co/guide/en/beats/filebeat/7.10/filebeat-installation-configuration.html#installation)
 
 ### Mac
 
 ```
 brew install elastic/tap/filebeat-full
+```
+
+### Debian
+
+```
+curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.10.0-amd64.deb
+sudo dpkg -i filebeat-7.10.0-amd64.deb
 ```
 
 ## Filebeat
