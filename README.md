@@ -59,6 +59,38 @@ docker-compose up -d
 brew install elastic/tap/filebeat-full
 ```
 
+## Filebeat
+
+### From log file
+
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/7.10/filebeat-input-log.html)
+
+```
+cd filebeat
+```
+
+Run loggen
+
+```
+loggen -log-file default.log -error -warn -info -debug
+```
+
+Run filebeat
+
+```
+filebeat -c $(pwd)/filebeat-log.yml -e
+```
+
+### From STDIN
+
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/7.10/filebeat-input-stdin.html)
+
+Run loggen & filebeat
+
+```
+loggen -log-prefix loggen-stdout -error -warn -info -debug | filebeat -c $(pwd)/filebeat-stdin.yml -e
+```
+
 ## Thank you! & Questions?
 
 That's it. Do you have any questions? **Let's go for a beer!**

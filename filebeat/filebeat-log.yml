@@ -1,0 +1,9 @@
+setup.kibana:
+  host: "localhost:5601"
+output.elasticsearch:
+  hosts:
+    - "localhost:9200"
+filebeat.inputs:
+  - type: log
+    paths:
+      - default.log
