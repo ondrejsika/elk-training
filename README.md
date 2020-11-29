@@ -8,6 +8,7 @@
 ## Related repositories
 
 - Loggen - https://github.com/ondrejsika/loggen
+- Demo ELK on Digital Ocean - https://github.com/ondrejsika/terraform-demo-elk
 
 ## Course
 
