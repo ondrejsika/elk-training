@@ -68,6 +68,17 @@ cd examples/elk/docker/elk-local
 docker-compose up -d
 ```
 
+### Demo ELK on Digital Ocean
+
+Source: [ondrejsika/terraform-demo-elk](https://github.com/ondrejsika/terraform-demo-elk)
+
+See:
+
+- http://elk.sikademo.com:9200
+- http://elk.sikademo.com:5601
+- https://es.elk.sikademo.com
+- https://kb.elk.sikademo.com
+
 ### Using Kubernetes
 
 #### Elastic Cloud on Kubernetes
