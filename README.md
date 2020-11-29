@@ -87,34 +87,98 @@ sudo dpkg -i filebeat-7.10.0-amd64.deb
 
 ## Filebeat
 
-### From log file
+### Filebear Inputs
+
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/7.10/configuration-filebeat-options.html)
+
+- Log
+- Stdin
+- Container
+- Docker
+- Syslog
+
+#### From file
 
 [Docs](https://www.elastic.co/guide/en/beats/filebeat/7.10/filebeat-input-log.html)
-
-```
-cd filebeat
-```
 
 Run loggen
 
 ```
-loggen -log-file default.log -error -warn -info -debug
+loggen -log-file /tmp/default.log -log-prefix loggen-file
 ```
 
 Run filebeat
 
 ```
-filebeat -c $(pwd)/filebeat-log.yml -e
+filebeat -c $(pwd)/filebeat/filebeat-input-log.yml -e
 ```
 
-### From STDIN
+#### From STDIN
 
 [Docs](https://www.elastic.co/guide/en/beats/filebeat/7.10/filebeat-input-stdin.html)
 
 Run loggen & filebeat
 
 ```
-loggen -log-prefix loggen-stdout -error -warn -info -debug | filebeat -c $(pwd)/filebeat-stdin.yml -e
+loggen -log-prefix loggen-stdin | filebeat -c $(pwd)/filebeat/filebeat-input-stdin.yml -e
+```
+
+#### From Docker
+
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/master/filebeat-input-docker.html)
+
+Run some Docker container
+
+```
+docker run --name loggen -d ondrejsika/loggen
+docker run --name loop -d ondrejsika/infinite-counter
+```
+
+```
+filebeat -c $(pwd)/filebeat/filebeat-input-docker.yml -e
+```
+
+#### From Container
+
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/master/filebeat-input-container.html)
+
+(similar to Docker)
+
+```
+filebeat -c $(pwd)/filebeat/filebeat-input-container.yml -e
+```
+
+### Filebeat Outputs
+
+- Elasticsearch
+- Logstash
+- File
+- Console
+
+#### File
+
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/7.10/console-output.html)
+
+```
+loggen | filebeat -c $(pwd)/filebeat/filebeat-output-file.yml -e
+```
+
+#### Console
+
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/7.10/console-output.html)
+
+```
+loggen | filebeat -c $(pwd)/filebeat/filebeat-output-console.yml -e
+```
+
+### Multiline Log Messages
+
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/7.10/multiline-examples.html)
+
+#### Python Traceback Example
+
+```
+cat log-examples/multiline-python.txt | filebeat -c $(pwd)/filebeat/filebeat-multiline-python.yml -e
 ```
 
 ## Thank you! & Questions?
