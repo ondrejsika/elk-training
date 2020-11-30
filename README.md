@@ -46,7 +46,17 @@ TODO: Course content
 
 ## Elasticsearch
 
+[What is Elasticsearch (Docs)](https://www.elastic.co/guide/en/elasticsearch/reference/current/elasticsearch-intro.html)
+
+Elasticsearch is the distributed search and analytics engine at the heart of the Elastic Stack. Logstash and Beats facilitate collecting, aggregating, and enriching your data and storing it in Elasticsearch. Kibana enables you to interactively explore, visualize, and share insights into your data and manage and monitor the stack. Elasticsearch is where the indexing, search, and analysis magic happens.
+
 ## Kibana
+
+[Kibana Intro (Docs)](https://www.elastic.co/guide/en/kibana/current/introduction.html)
+
+Visualize and analyze your data and manage all things Elastic Stack.
+
+![](./images/intro-kibana.png)
 
 ## Beats
 
@@ -55,6 +65,10 @@ TODO: Course content
 ![](./images/filebeat.png)
 
 ## Logstash
+
+[Logstash Introduction](https://www.elastic.co/guide/en/logstash/current/introduction.html)
+
+![](./images/logstash.png)
 
 ## Install
 
