@@ -44,13 +44,13 @@ TODO: Course content
 - Beats
 - Logstrash
 
-## Elasticsearch
+### Elasticsearch Overview
 
 [What is Elasticsearch (Docs)](https://www.elastic.co/guide/en/elasticsearch/reference/current/elasticsearch-intro.html)
 
 Elasticsearch is the distributed search and analytics engine at the heart of the Elastic Stack. Logstash and Beats facilitate collecting, aggregating, and enriching your data and storing it in Elasticsearch. Kibana enables you to interactively explore, visualize, and share insights into your data and manage and monitor the stack. Elasticsearch is where the indexing, search, and analysis magic happens.
 
-## Kibana
+### Kibana Overview
 
 [Kibana Intro (Docs)](https://www.elastic.co/guide/en/kibana/current/introduction.html)
 
@@ -58,13 +58,13 @@ Visualize and analyze your data and manage all things Elastic Stack.
 
 ![](./images/intro-kibana.png)
 
-## Beats
+### Beats Overview
 
 [Filebeat Overview](https://www.elastic.co/guide/en/beats/filebeat/7.x/filebeat-overview.html)
 
 ![](./images/filebeat.png)
 
-## Logstash
+### Logstash Overview
 
 [Logstash Introduction](https://www.elastic.co/guide/en/logstash/current/introduction.html)
 
@@ -72,7 +72,7 @@ Visualize and analyze your data and manage all things Elastic Stack.
 
 ## Install
 
-## Elasticsearch & Kibana
+## Install Elasticsearch & Kibana
 
 ### Using Docker
 
@@ -132,7 +132,7 @@ See:
 - https://es.k8s.sikademo.com
 - https://lb.k8s.sikademo.com
 
-## Filebeat
+## Install Filebeat
 
 [Docs](https://www.elastic.co/downloads/beats/filebeat) | [Quick Start Installation](https://www.elastic.co/guide/en/beats/filebeat/7.10/filebeat-installation-configuration.html#installation)
 
