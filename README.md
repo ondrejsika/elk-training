@@ -173,9 +173,9 @@ Run loggen & filebeat
 loggen -log-prefix loggen-stdin | filebeat -c $(pwd)/filebeat/filebeat-input-stdin.yml -e
 ```
 
-#### From Docker
+#### From Container
 
-[Docs](https://www.elastic.co/guide/en/beats/filebeat/master/filebeat-input-docker.html)
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/master/filebeat-input-container.html)
 
 Run some Docker container
 
@@ -183,16 +183,6 @@ Run some Docker container
 docker run --name loggen -d ondrejsika/loggen
 docker run --name loop -d ondrejsika/infinite-counter
 ```
-
-```
-filebeat -c $(pwd)/filebeat/filebeat-input-docker.yml -e
-```
-
-#### From Container
-
-[Docs](https://www.elastic.co/guide/en/beats/filebeat/master/filebeat-input-container.html)
-
-(similar to Docker)
 
 ```
 filebeat -c $(pwd)/filebeat/filebeat-input-container.yml -e
