@@ -257,6 +257,18 @@ loggen | filebeat -c $(pwd)/filebeat/filebeat-processor-drop-fields.yml
 loggen | filebeat -c $(pwd)/filebeat/filebeat-processor-drop-event.yml
 ```
 
+#### Add Docker Metadata
+
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/7.10/add-docker-metadata.html)
+
+```
+filebeat -c $(pwd)/filebeat/filebeat-processor-docker.yml -e
+```
+
+#### Add Kubernetes Metadata
+
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/7.10/add-kubernetes-metadata.html)
+
 ### Filebeat Modules
 
 [Docs (List of Modules)](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-modules.html) | [Docs (Configure Modules)](https://www.elastic.co/guide/en/beats/filebeat/current/configuration-filebeat-modules.html)
