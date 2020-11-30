@@ -281,6 +281,10 @@ Filebeat modules simplify the collection, parsing, and visualization of common l
 filebeat -c $(pwd)/filebeat/filebeat-module-traefik.yml -e
 ```
 
+### Filebeat Autodiscovery
+
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/7.10/configuration-autodiscover.html)
+
 ## Logstash
 
 TODO
