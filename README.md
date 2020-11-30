@@ -233,6 +233,14 @@ Filebeat modules simplify the collection, parsing, and visualization of common l
 filebeat -c $(pwd)/filebeat/filebeat-module-traefik.yml -e
 ```
 
+## Logstash
+
+TODO
+
+## Kibana
+
+TODO
+
 ## Thank you! & Questions?
 
 That's it. Do you have any questions? **Let's go for a beer!**
