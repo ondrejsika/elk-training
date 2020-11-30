@@ -108,10 +108,15 @@ See:
 kubectl apply -f https://download.elastic.co/downloads/eck/1.3.0/all-in-one.yaml
 ```
 
-#### Install Elasticsearch & Kibana
+#### Setup `elk` namespace
 
 ```
-kubectl apply -f ./k8s/ns-elk-single-node.yml
+kubectl apply -f ./k8s/ns-elk.yml
+```
+
+#### Install Single Node Elasticsearch & Kibana
+
+```
 kubectl apply -f ./k8s/elk-single-node
 ```
 
@@ -125,6 +130,23 @@ Get password for user `elastic`
 
 ```
 kubectl get secret main-es-elastic-user -o=jsonpath='{.data.elastic}' | base64 --decode; echo
+```
+
+See:
+
+- https://es.k8s.sikademo.com
+- https://lb.k8s.sikademo.com
+
+#### Upgrade to Elasticsearch Cluster
+
+```
+kubectl get -f ./k8s/elk-cluster
+```
+
+Wait until Elasticsearch and Kibana will be GREEN
+
+```
+kubectl get -f ./k8s/elk-cluster
 ```
 
 See:
