@@ -151,7 +151,7 @@ sudo dpkg -i filebeat-7.10.0-amd64.deb
 
 ## Filebeat
 
-### Filebear Inputs
+### Filebeat Inputs
 
 [Docs](https://www.elastic.co/guide/en/beats/filebeat/7.10/configuration-filebeat-options.html)
 
