@@ -79,7 +79,7 @@ Visualize and analyze your data and manage all things Elastic Stack.
 Simple single node installation for development
 
 ```
-cd examples/elk/docker/elk-local
+cd elk/docker/elk-local
 docker-compose up -d
 ```
 
