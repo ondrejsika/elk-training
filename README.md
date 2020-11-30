@@ -231,6 +231,18 @@ loggen | filebeat -c $(pwd)/filebeat/filebeat-output-console.yml -e
 cat log-examples/multiline-python.txt | filebeat -c $(pwd)/filebeat/filebeat-multiline-python.yml -e
 ```
 
+### Filebeat Modules
+
+[Docs (List of Modules)](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-modules.html) | [Docs (Configure Modules)](https://www.elastic.co/guide/en/beats/filebeat/current/configuration-filebeat-modules.html)
+
+Filebeat modules simplify the collection, parsing, and visualization of common log formats.
+
+#### Traefik Example
+
+```
+filebeat -c $(pwd)/filebeat/filebeat-module-traefik.yml -e
+```
+
 ## Thank you! & Questions?
 
 That's it. Do you have any questions? **Let's go for a beer!**
