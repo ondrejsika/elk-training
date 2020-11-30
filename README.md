@@ -235,6 +235,28 @@ loggen | filebeat -c $(pwd)/filebeat/filebeat-output-console.yml -e
 cat log-examples/multiline-python.txt | filebeat -c $(pwd)/filebeat/filebeat-multiline-python.yml -e
 ```
 
+### Processors
+
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/7.10/filtering-and-enhancing-data.html)
+
+- Conditions - https://www.elastic.co/guide/en/beats/filebeat/7.10/defining-processors.html#conditions
+
+#### Drop Fields
+
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/7.10/drop-fields.html)
+
+```
+loggen | filebeat -c $(pwd)/filebeat/filebeat-processor-drop-fields.yml
+```
+
+#### Drop Event
+
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/7.10/drop-event.html)
+
+```
+loggen | filebeat -c $(pwd)/filebeat/filebeat-processor-drop-event.yml
+```
+
 ### Filebeat Modules
 
 [Docs (List of Modules)](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-modules.html) | [Docs (Configure Modules)](https://www.elastic.co/guide/en/beats/filebeat/current/configuration-filebeat-modules.html)
