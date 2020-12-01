@@ -313,7 +313,57 @@ TODO
 
 ## Kibana
 
-TODO
+### Kibana Query Language
+
+#### Fulltext search
+
+```
+ERROR
+```
+
+```
+"and should be actionable"
+```
+
+#### Exact Match
+
+```
+agent.hostname:sika-mac
+```
+
+#### Exists
+
+```
+event.dataset:*
+```
+
+#### Wildcard
+
+```
+user_agent.os.name: Mac*
+```
+
+#### AND
+
+```
+source.address: 176.114.249.139 and http.response.status_code: 500
+```
+
+#### OR
+
+```
+http.response.status_code: 200 or http.response.status_code: 302
+```
+
+```
+http.response.status_code: (200 or 302)
+```
+
+#### NOT
+
+```
+http.response.status_code:* and not http.response.status_code: (200 or 302)
+```
 
 ## Thank you! & Questions?
 
