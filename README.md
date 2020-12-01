@@ -257,6 +257,12 @@ loggen | filebeat -c $(pwd)/filebeat/filebeat-output-console.yml -e
 cat log-examples/multiline-python.txt | filebeat -c $(pwd)/filebeat/filebeat-multiline-python.yml -e
 ```
 
+#### Java Traceback Example
+
+```
+cat log-examples/multiline-java.txt | filebeat -c $(pwd)/filebeat/filebeat-multiline-java.yml -e
+```
+
 ### Processors
 
 [Docs](https://www.elastic.co/guide/en/beats/filebeat/7.10/filtering-and-enhancing-data.html)
