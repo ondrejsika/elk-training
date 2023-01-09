@@ -195,6 +195,12 @@ curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-8.5.3-
 sudo dpkg -i filebeat-8.5.3-amd64.deb
 ```
 
+or using `slu`:
+
+```
+slu install-bin filebeat
+```
+
 ## Filebeat
 
 ### Filebeat Inputs
