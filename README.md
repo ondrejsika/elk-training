@@ -60,7 +60,7 @@ Visualize and analyze your data and manage all things Elastic Stack.
 
 ### Beats Overview
 
-[Filebeat Overview](https://www.elastic.co/guide/en/beats/filebeat/7.x/filebeat-overview.html)
+[Filebeat Overview](https://www.elastic.co/guide/en/beats/filebeat/8.x/filebeat-overview.html)
 
 ![](./images/filebeat.png)
 
@@ -174,7 +174,7 @@ See:
 
 ## Install Filebeat
 
-[Docs](https://www.elastic.co/downloads/beats/filebeat) | [Quick Start Installation](https://www.elastic.co/guide/en/beats/filebeat/7.10/filebeat-installation-configuration.html#installation)
+[Docs](https://www.elastic.co/downloads/beats/filebeat) | [Quick Start Installation](https://www.elastic.co/guide/en/beats/filebeat/8.5/filebeat-installation-configuration.html#installation)
 
 ### Mac
 
@@ -185,15 +185,15 @@ brew install elastic/tap/filebeat-full
 ### Debian
 
 ```
-curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.10.0-amd64.deb
-sudo dpkg -i filebeat-7.10.0-amd64.deb
+curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-8.5.3-amd64.deb
+sudo dpkg -i filebeat-8.5.3-amd64.deb
 ```
 
 ## Filebeat
 
 ### Filebeat Inputs
 
-[Docs](https://www.elastic.co/guide/en/beats/filebeat/7.10/configuration-filebeat-options.html)
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/configuration-filebeat-options.html)
 
 - Log
 - Stdin
@@ -203,7 +203,7 @@ sudo dpkg -i filebeat-7.10.0-amd64.deb
 
 #### From file
 
-[Docs](https://www.elastic.co/guide/en/beats/filebeat/7.10/filebeat-input-log.html)
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/filebeat-input-log.html)
 
 Run loggen
 
@@ -219,7 +219,7 @@ filebeat -c $(pwd)/filebeat/filebeat-input-log.yml -e
 
 #### From STDIN
 
-[Docs](https://www.elastic.co/guide/en/beats/filebeat/7.10/filebeat-input-stdin.html)
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/filebeat-input-stdin.html)
 
 Run loggen & filebeat
 
@@ -251,7 +251,7 @@ filebeat -c $(pwd)/filebeat/filebeat-input-container.yml -e
 
 #### File
 
-[Docs](https://www.elastic.co/guide/en/beats/filebeat/7.10/console-output.html)
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/console-output.html)
 
 ```
 loggen | filebeat -c $(pwd)/filebeat/filebeat-output-file.yml -e
@@ -259,7 +259,7 @@ loggen | filebeat -c $(pwd)/filebeat/filebeat-output-file.yml -e
 
 #### Console
 
-[Docs](https://www.elastic.co/guide/en/beats/filebeat/7.10/console-output.html)
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/console-output.html)
 
 ```
 loggen | filebeat -c $(pwd)/filebeat/filebeat-output-console.yml -e
@@ -267,7 +267,7 @@ loggen | filebeat -c $(pwd)/filebeat/filebeat-output-console.yml -e
 
 ### Multiline Log Messages
 
-[Docs](https://www.elastic.co/guide/en/beats/filebeat/7.10/multiline-examples.html)
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/multiline-examples.html)
 
 #### Python Traceback Example
 
@@ -283,13 +283,13 @@ cat log-examples/multiline-java.txt | filebeat -c $(pwd)/filebeat/filebeat-multi
 
 ### Processors
 
-[Docs](https://www.elastic.co/guide/en/beats/filebeat/7.10/filtering-and-enhancing-data.html)
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/filtering-and-enhancing-data.html)
 
-- Conditions - https://www.elastic.co/guide/en/beats/filebeat/7.10/defining-processors.html#conditions
+- Conditions - https://www.elastic.co/guide/en/beats/filebeat/8.5/defining-processors.html#conditions
 
 #### Drop Fields
 
-[Docs](https://www.elastic.co/guide/en/beats/filebeat/7.10/drop-fields.html)
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/drop-fields.html)
 
 ```
 loggen | filebeat -c $(pwd)/filebeat/filebeat-processor-drop-fields.yml
@@ -297,7 +297,7 @@ loggen | filebeat -c $(pwd)/filebeat/filebeat-processor-drop-fields.yml
 
 #### Drop Event
 
-[Docs](https://www.elastic.co/guide/en/beats/filebeat/7.10/drop-event.html)
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/drop-event.html)
 
 ```
 loggen | filebeat -c $(pwd)/filebeat/filebeat-processor-drop-event.yml
@@ -305,7 +305,7 @@ loggen | filebeat -c $(pwd)/filebeat/filebeat-processor-drop-event.yml
 
 #### Add Docker Metadata
 
-[Docs](https://www.elastic.co/guide/en/beats/filebeat/7.10/add-docker-metadata.html)
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/add-docker-metadata.html)
 
 ```
 filebeat -c $(pwd)/filebeat/filebeat-processor-docker.yml -e
@@ -313,7 +313,7 @@ filebeat -c $(pwd)/filebeat/filebeat-processor-docker.yml -e
 
 #### Add Kubernetes Metadata
 
-[Docs](https://www.elastic.co/guide/en/beats/filebeat/7.10/add-kubernetes-metadata.html)
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/add-kubernetes-metadata.html)
 
 ### Filebeat Modules
 
@@ -329,7 +329,7 @@ filebeat -c $(pwd)/filebeat/filebeat-module-traefik.yml -e
 
 ### Filebeat Autodiscovery
 
-[Docs](https://www.elastic.co/guide/en/beats/filebeat/7.10/configuration-autodiscover.html)
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/configuration-autodiscover.html)
 
 ## Logstash
 
