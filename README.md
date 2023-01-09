@@ -100,6 +100,7 @@ See:
 
 - Intro - https://www.elastic.co/elastic-cloud-kubernetes
 - Docs / Tutorial - https://www.elastic.co/guide/en/cloud-on-k8s/current/index.html
+- Deploy ECK - https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-deploy-eck.html
 - Github - https://github.com/elastic/cloud-on-k8s
 
 #### Setup
