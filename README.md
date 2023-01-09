@@ -103,11 +103,21 @@ See:
 - Deploy ECK - https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-deploy-eck.html
 - Github - https://github.com/elastic/cloud-on-k8s
 
-#### Setup
+#### Install ECK
+
+Install CRDs
 
 ```
-kubectl apply -f https://download.elastic.co/downloads/eck/1.3.0/all-in-one.yaml
+kubectl create -f https://download.elastic.co/downloads/eck/2.5.0/crds.yaml
 ```
+
+Install Operator
+
+```
+kubectl apply -f https://download.elastic.co/downloads/eck/2.5.0/operator.yaml
+```
+
+Done.
 
 #### Setup `elk` namespace
 
