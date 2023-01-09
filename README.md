@@ -206,6 +206,7 @@ slu install-bin filebeat
 - Container
 - Docker
 - Syslog
+- Kafka
 
 #### From file
 
@@ -251,6 +252,7 @@ filebeat -c $(pwd)/filebeat/filebeat-input-container.yml -e
 ### Filebeat Outputs
 
 - Elasticsearch
+- Kafka
 - File
 - Console
 
@@ -335,6 +337,71 @@ filebeat -c $(pwd)/filebeat/filebeat-module-traefik.yml -e
 ### Filebeat Autodiscovery
 
 [Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/configuration-autodiscover.html)
+
+## Install Kafka
+
+Install Strimzi - Kafka Operator
+
+```
+kubectl create namespace kafka
+```
+
+```
+kubectl create -f 'https://strimzi.io/install/latest?namespace=kafka' -n kafka
+```
+
+See operator's pod
+
+```
+kubectl get pod -n kafka
+```
+
+Install Kafka Cluster
+
+```
+kubectl apply -f ./k8s/kafka
+```
+
+See Kafka Cluster
+
+```
+kubectl get -n kafka kafka
+```
+
+Get Bootstrap Node
+
+```
+kubectl describe -f k8s/kafka | grep "Bootstrap Servers"
+```
+
+Setup `kaf` - Kafka CLI
+
+```
+BOOTSTRAP_NODE=
+```
+
+Example
+
+```
+BOOTSTRAP_NODE=134.122.89.34:32473
+```
+
+```
+kaf config add-cluster $BOOTSTRAP_NODE -b $BOOTSTRAP_NODE
+kaf config use-cluster $BOOTSTRAP_NODE
+```
+
+Get nodes
+
+```
+kaf nodes
+```
+
+Get topics
+
+```
+kaf topics
+```
 
 ## Kibana
 
