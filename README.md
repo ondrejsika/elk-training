@@ -48,7 +48,7 @@ TODO: Course content
 
 [What is Elasticsearch (Docs)](https://www.elastic.co/guide/en/elasticsearch/reference/current/elasticsearch-intro.html)
 
-Elasticsearch is the distributed search and analytics engine at the heart of the Elastic Stack. Logstash and Beats facilitate collecting, aggregating, and enriching your data and storing it in Elasticsearch. Kibana enables you to interactively explore, visualize, and share insights into your data and manage and monitor the stack. Elasticsearch is where the indexing, search, and analysis magic happens.
+Elasticsearch is the distributed search and analytics engine at the heart of the Elastic Stack. Beats facilitate collecting, aggregating, and enriching your data and storing it in Elasticsearch. Kibana enables you to interactively explore, visualize, and share insights into your data and manage and monitor the stack. Elasticsearch is where the indexing, search, and analysis magic happens.
 
 ### Kibana Overview
 
@@ -63,12 +63,6 @@ Visualize and analyze your data and manage all things Elastic Stack.
 [Filebeat Overview](https://www.elastic.co/guide/en/beats/filebeat/8.x/filebeat-overview.html)
 
 ![](./images/filebeat.png)
-
-### Logstash Overview
-
-[Logstash Introduction](https://www.elastic.co/guide/en/logstash/current/introduction.html)
-
-![](./images/logstash.png)
 
 ## Install
 
@@ -257,7 +251,6 @@ filebeat -c $(pwd)/filebeat/filebeat-input-container.yml -e
 ### Filebeat Outputs
 
 - Elasticsearch
-- Logstash
 - File
 - Console
 
@@ -342,10 +335,6 @@ filebeat -c $(pwd)/filebeat/filebeat-module-traefik.yml -e
 ### Filebeat Autodiscovery
 
 [Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/configuration-autodiscover.html)
-
-## Logstash
-
-TODO
 
 ## Kibana
 
