@@ -1,0 +1,9 @@
+filebeat.inputs:
+- type: kafka
+  hosts:
+    - ${KAFKA_NODE:?Environment variable KAFKA_NODE is required}
+  topics:
+    - logs
+  group_id: filebeat
+
+output.console:
