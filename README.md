@@ -403,6 +403,36 @@ Get topics
 kaf topics
 ```
 
+## Filebeat and Kafka
+
+Send logs to Kafka
+
+```
+export KAFKA_NODE=
+```
+
+Example
+
+```
+export KAFKA_NODE=134.122.89.34:31031
+```
+
+```
+slu loggen --log-prefix loggen-kafka | filebeat -c $(pwd)/filebeat/filebeat-output-kafka.yml -e
+```
+
+Read logs from Kafka
+
+```
+filebeat -c $(pwd)/filebeat/filebeat-input-kafka.yml
+```
+
+Read only message form Kafka logs
+
+```
+filebeat -c $(pwd)/filebeat/filebeat-input-kafka.yml | jq -r '.message'
+```
+
 ## Kibana
 
 ### Kibana Query Language
