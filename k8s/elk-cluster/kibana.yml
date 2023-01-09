@@ -4,7 +4,7 @@ metadata:
   name: main
   namespace: elk
 spec:
-  version: 7.10.0
+  version: 8.5.0
   count: 2
   elasticsearchRef:
     name: main

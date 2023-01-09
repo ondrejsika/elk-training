@@ -4,14 +4,15 @@ metadata:
   name: main
   namespace: elk
 spec:
-  version: 7.10.0
+  version: 8.5.3
   nodeSets:
     - name: default
       count: 1
       config:
-        node.master: true
-        node.data: true
-        node.ingest: true
+        node.roles:
+          - master
+          - data
+          - ingest
         node.store.allow_mmap: false
   http:
     tls:

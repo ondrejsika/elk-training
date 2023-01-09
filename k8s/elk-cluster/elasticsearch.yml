@@ -4,21 +4,20 @@ metadata:
   name: main
   namespace: elk
 spec:
-  version: 7.10.0
+  version: 8.5.0
   nodeSets:
     - name: master
       count: 3
       config:
-        node.master: true
-        node.data: false
-        node.ingest: true
+        node.roles:
+          - master
+          - ingest
         node.store.allow_mmap: false
     - name: data
       count: 3
       config:
-        node.master: false
-        node.data: true
-        node.ingest: true
+        node.roles:
+          - data
         node.store.allow_mmap: false
   http:
     tls:
