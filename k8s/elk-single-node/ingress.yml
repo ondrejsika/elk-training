@@ -3,7 +3,15 @@ kind: Ingress
 metadata:
   name: main
   namespace: elk
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
 spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - es.k8s.sikademo.com
+        - kb.k8s.sikademo.com
+      secretName: main-tls
   rules:
     - host: es.k8s.sikademo.com
       http:
