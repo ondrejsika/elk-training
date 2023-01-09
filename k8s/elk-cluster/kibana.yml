@@ -8,6 +8,8 @@ spec:
   count: 2
   elasticsearchRef:
     name: main
+  config:
+    server.publicBaseUrl: https://kb.k8s.sikademo.com
   http:
     tls:
       selfSignedCertificate:
