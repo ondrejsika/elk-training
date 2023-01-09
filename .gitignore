@@ -3,5 +3,18 @@
 .DS_Store
 *.log
 *.deb
+*.backup
 
 ca.crt
+
+# Terraform
+.terraform
+*.tfstate
+.terraform.tfstate.lock.info
+*.tfvars
+!*.EXAMPLE.tfvars
+override.tf
+
+# Infracost
+.infracost
+.infracost-reports
