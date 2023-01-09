@@ -7,7 +7,6 @@
 
 ## Related repositories
 
-- Loggen - https://github.com/ondrejsika/loggen
 - Demo ELK on Digital Ocean - https://github.com/ondrejsika/terraform-demo-elk
 
 ## Course
@@ -217,10 +216,10 @@ slu install-bin filebeat
 
 [Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/filebeat-input-log.html)
 
-Run loggen
+Run `slu loggen`
 
 ```
-loggen -log-file /tmp/default.log -log-prefix loggen-file
+slu loggen --log-file /tmp/default.log --log-prefix loggen-file
 ```
 
 Run filebeat
@@ -233,10 +232,10 @@ filebeat -c $(pwd)/filebeat/filebeat-input-log.yml -e
 
 [Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/filebeat-input-stdin.html)
 
-Run loggen & filebeat
+Run `slu loggen` & filebeat
 
 ```
-loggen -log-prefix loggen-stdin | filebeat -c $(pwd)/filebeat/filebeat-input-stdin.yml -e
+slu loggen --log-prefix loggen-stdin | filebeat -c $(pwd)/filebeat/filebeat-input-stdin.yml -e
 ```
 
 #### From Container
@@ -246,7 +245,7 @@ loggen -log-prefix loggen-stdin | filebeat -c $(pwd)/filebeat/filebeat-input-std
 Run some Docker container
 
 ```
-docker run --name loggen -d ondrejsika/loggen
+docker run --name slu-loggen -d sikalabs/slu:v0.58.1 slu loggen --log-prefix loggen-container
 docker run --name loop -d ondrejsika/infinite-counter
 ```
 
@@ -266,7 +265,7 @@ filebeat -c $(pwd)/filebeat/filebeat-input-container.yml -e
 [Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/console-output.html)
 
 ```
-loggen | filebeat -c $(pwd)/filebeat/filebeat-output-file.yml -e
+slu loggen | filebeat -c $(pwd)/filebeat/filebeat-output-file.yml -e
 ```
 
 #### Console
@@ -274,7 +273,7 @@ loggen | filebeat -c $(pwd)/filebeat/filebeat-output-file.yml -e
 [Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/console-output.html)
 
 ```
-loggen | filebeat -c $(pwd)/filebeat/filebeat-output-console.yml -e
+slu loggen | filebeat -c $(pwd)/filebeat/filebeat-output-console.yml -e
 ```
 
 ### Multiline Log Messages
@@ -304,7 +303,7 @@ cat log-examples/multiline-java.txt | filebeat -c $(pwd)/filebeat/filebeat-multi
 [Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/drop-fields.html)
 
 ```
-loggen | filebeat -c $(pwd)/filebeat/filebeat-processor-drop-fields.yml
+slu loggen | filebeat -c $(pwd)/filebeat/filebeat-processor-drop-fields.yml
 ```
 
 #### Drop Event
@@ -312,7 +311,7 @@ loggen | filebeat -c $(pwd)/filebeat/filebeat-processor-drop-fields.yml
 [Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/drop-event.html)
 
 ```
-loggen | filebeat -c $(pwd)/filebeat/filebeat-processor-drop-event.yml
+slu loggen | filebeat -c $(pwd)/filebeat/filebeat-processor-drop-event.yml
 ```
 
 #### Add Docker Metadata
