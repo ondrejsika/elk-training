@@ -119,10 +119,10 @@ kubectl apply -f https://download.elastic.co/downloads/eck/2.5.0/operator.yaml
 
 Done.
 
-#### Setup `elk` namespace
+#### Setup `elk` & `filebeat` namespace
 
 ```
-kubectl apply -f ./k8s/ns-elk.yml
+kubectl apply -f ./k8s/ns.yml
 ```
 
 #### Install Single Node Elasticsearch & Kibana
