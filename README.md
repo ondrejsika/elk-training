@@ -143,6 +143,12 @@ Get password for user `elastic`
 kubectl -n elk get secret main-es-elastic-user -o=jsonpath='{.data.elastic}' | base64 --decode; echo
 ```
 
+or using `slu`:
+
+```
+slu eck elastic-password -n elk -e main
+```
+
 See:
 
 - https://es.k8s.sikademo.com
