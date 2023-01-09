@@ -135,7 +135,7 @@ kubectl -n elk get secret main-es-elastic-user -o=jsonpath='{.data.elastic}' | b
 See:
 
 - https://es.k8s.sikademo.com
-- https://lb.k8s.sikademo.com
+- https://kb.k8s.sikademo.com
 
 #### Upgrade to Elasticsearch Cluster
 
@@ -152,7 +152,7 @@ kubectl get -f ./k8s/elk-cluster
 See:
 
 - https://es.k8s.sikademo.com
-- https://lb.k8s.sikademo.com
+- https://kb.k8s.sikademo.com
 
 ## Install Filebeat
 
