@@ -2,5 +2,6 @@
 .env
 .DS_Store
 *.log
+*.deb
 
 ca.crt
