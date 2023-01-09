@@ -43,7 +43,6 @@ TODO: Course content
 - Elasticsearch
 - Kibana
 - Beats
-- Logstrash
 
 ### Elasticsearch Overview
 
