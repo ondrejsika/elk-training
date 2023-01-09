@@ -172,6 +172,26 @@ See:
 - https://es.k8s.sikademo.com
 - https://kb.k8s.sikademo.com
 
+## User Management
+
+## User Management using Terraform
+
+```
+cd terraform/users
+```
+
+Create `main.auto.tfvars` ...
+
+```
+terraform init
+```
+
+```
+terraform apply
+```
+
+See: https://kb.k8s.sikademo.com/app/management/security/users
+
 ## Install Filebeat
 
 [Docs](https://www.elastic.co/downloads/beats/filebeat) | [Quick Start Installation](https://www.elastic.co/guide/en/beats/filebeat/8.5/filebeat-installation-configuration.html#installation)
