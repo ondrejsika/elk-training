@@ -176,6 +176,11 @@ See:
 
 ## User Management using Terraform
 
+- Provider - https://registry.terraform.io/providers/elastic/elasticstack/latest/docs
+- User - https://registry.terraform.io/providers/elastic/elasticstack/latest/docs/resources/elasticsearch_security_user
+- API Key - https://registry.terraform.io/providers/elastic/elasticstack/latest/docs/resources/elasticsearch_security_api_key
+- Role - https://registry.terraform.io/providers/elastic/elasticstack/latest/docs/resources/elasticsearch_security_role
+
 ```
 cd terraform/users
 ```
