@@ -71,6 +71,7 @@ Visualize and analyze your data and manage all things Elastic Stack.
 ### Debian
 
 - https://www.elastic.co/guide/en/elasticsearch/reference/current/deb.html
+- https://www.elastic.co/guide/en/kibana/current/deb.html
 
 ```
 wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo gpg --dearmor -o /usr/share/keyrings/elasticsearch-keyring.gpg
@@ -114,6 +115,38 @@ sudo /bin/systemctl enable elasticsearch.service
 
 ```
 sudo /bin/systemctl start elasticsearch.service
+```
+
+Install Kibana
+
+```
+sudo apt-get update && sudo apt-get install kibana
+```
+
+Create token for Kibana (on ES node)
+
+```
+/usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s kibana
+```
+
+```
+TOKEN=
+```
+
+```
+/usr/share/kibana/bin/kibana-setup --enrollment-token $TOKEN
+```
+
+```
+sudo /bin/systemctl daemon-reload
+```
+
+```
+sudo /bin/systemctl enable kibana.service
+```
+
+```
+sudo /bin/systemctl start kibana.service
 ```
 
 ### Using Docker
