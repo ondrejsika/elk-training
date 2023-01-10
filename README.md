@@ -641,6 +641,21 @@ http.response.status_code:* and not http.response.status_code: (200 or 302)
 
 ![](./images/spaces/spaces-5.png)
 
+## Stream Settings (Fields)
+
+![](./images/stream-settings-fields/stream-settings-fields-1.png)
+
+![](./images/stream-settings-fields/stream-settings-fields-2.png)
+
+![](./images/stream-settings-fields/stream-settings-fields-3.png)
+
+![](./images/stream-settings-fields/stream-settings-fields-4.png)
+
+![](./images/stream-settings-fields/stream-settings-fields-5.png)
+
+![](./images/stream-settings-fields/stream-settings-fields-6.png)
+
+
 ## Thank you! & Questions?
 
 That's it. Do you have any questions? **Let's go for a beer!**
