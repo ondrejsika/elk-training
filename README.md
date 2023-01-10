@@ -463,6 +463,22 @@ slu loggen | filebeat -c $(pwd)/filebeat/filebeat-processor-add-labels.yml
 slu loggen | filebeat -c $(pwd)/filebeat/filebeat-processor-add-labels.yml | jq .labels
 ```
 
+### Add Host Metadata
+
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/add-host-metadata.html)
+
+```
+echo hello | filebeat -c $(pwd)/filebeat/filebeat-processor-host.yml | jq .host
+```
+
+```
+echo hello | filebeat -c $(pwd)/filebeat/filebeat-processor-host.yml | jq .host.hostname
+```
+
+```
+echo hello | filebeat -c $(pwd)/filebeat/filebeat-processor-host.yml | jq .host.os
+```
+
 #### Drop Fields
 
 [Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/drop-fields.html)
