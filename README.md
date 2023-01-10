@@ -91,6 +91,12 @@ sudo apt-get update && sudo apt-get install elasticsearch
 
 Initial node
 
+Reset `elastic` user password
+
+```
+/usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic --batch
+```
+
 ```
 /usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s node
 ```
@@ -121,6 +127,12 @@ Install Kibana
 
 ```
 sudo apt-get update && sudo apt-get install kibana
+```
+
+Listen on all interfaces
+
+```
+vim /etc/kibana/kibana.yml
 ```
 
 Create token for Kibana (on ES node)
