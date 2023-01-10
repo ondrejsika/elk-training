@@ -436,6 +436,18 @@ cat log-examples/multiline-java.txt | filebeat -c $(pwd)/filebeat/filebeat-multi
 
 - Conditions - https://www.elastic.co/guide/en/beats/filebeat/8.5/defining-processors.html#conditions
 
+### Add Labels
+
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/add-labels.html)
+
+```
+slu loggen | filebeat -c $(pwd)/filebeat/filebeat-processor-add-labels.yml
+```
+
+```
+slu loggen | filebeat -c $(pwd)/filebeat/filebeat-processor-add-labels.yml | jq .labels
+```
+
 #### Drop Fields
 
 [Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/drop-fields.html)
