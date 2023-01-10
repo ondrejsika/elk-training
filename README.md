@@ -36,7 +36,22 @@ For sharing links & "secrets".
 - Microsoft Teams
 - https://sika.link/chat (tlk.io)
 
-TODO: Course content
+## Agenda
+
+- Introduction to ELK
+- Install Elasticsearch & Kibana
+  - Debian
+  - Using Docker
+  - Kubernetes
+- Filebeat
+  - Install
+  - Configuration
+- Kibana
+  - Overview
+  - Discover
+  - Visualize
+  - Dashboard
+  - Management
 
 ## Overview
 
