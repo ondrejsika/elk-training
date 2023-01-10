@@ -655,6 +655,18 @@ http.response.status_code:* and not http.response.status_code: (200 or 302)
 
 ![](./images/stream-settings-fields/stream-settings-fields-6.png)
 
+## Discover
+
+![](./images/discover/discover-1.png)
+
+![](./images/discover/discover-2.png)
+
+![](./images/discover/discover-3.png)
+
+![](./images/discover/discover-4.png)
+
+![](./images/discover/discover-5.png)
+
 
 ## Thank you! & Questions?
 
