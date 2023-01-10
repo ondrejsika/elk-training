@@ -1,0 +1,11 @@
+filebeat.inputs:
+  - type: stdin
+
+processors:
+  - add_labels:
+      labels:
+        foo: bar
+        x-foo: bar
+
+output.console:
+  pretty: true
