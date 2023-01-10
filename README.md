@@ -629,6 +629,18 @@ http.response.status_code: (200 or 302)
 http.response.status_code:* and not http.response.status_code: (200 or 302)
 ```
 
+## Spaces
+
+![](./images/spaces/spaces-1.png)
+
+![](./images/spaces/spaces-2.png)
+
+![](./images/spaces/spaces-3.png)
+
+![](./images/spaces/spaces-4.png)
+
+![](./images/spaces/spaces-5.png)
+
 ## Thank you! & Questions?
 
 That's it. Do you have any questions? **Let's go for a beer!**
