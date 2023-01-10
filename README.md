@@ -91,6 +91,24 @@ sudo apt-get update && sudo apt-get install elasticsearch
 
 Initial node
 
+Set `cluter.name` and listen on all interfaces (`network.host`) in `/etc/elasticsearch/elasticsearch.yml`
+
+```
+vim /etc/elasticsearch/elasticsearch.yml
+```
+
+```
+sudo /bin/systemctl daemon-reload
+```
+
+```
+sudo /bin/systemctl enable elasticsearch.service
+```
+
+```
+sudo /bin/systemctl start elasticsearch.service
+```
+
 Reset `elastic` user password
 
 ```
@@ -102,6 +120,12 @@ Reset `elastic` user password
 ```
 
 or join cluster
+
+Set `cluter.name` in `/etc/elasticsearch/elasticsearch.yml`
+
+```
+vim /etc/elasticsearch/elasticsearch.yml
+```
 
 ```
 export TOKEN=
@@ -129,7 +153,7 @@ Install Kibana
 sudo apt-get update && sudo apt-get install kibana
 ```
 
-Listen on all interfaces
+Listen on all interfaces (`server.host`) in `/etc/kibana/kibana.yml`
 
 ```
 vim /etc/kibana/kibana.yml
