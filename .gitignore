@@ -5,6 +5,7 @@
 *.deb
 *.backup
 .tmp
+*.local.txt
 
 ca.crt
 
