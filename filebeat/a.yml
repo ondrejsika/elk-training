@@ -1,13 +1,20 @@
 filebeat.inputs:
-  - type: filestream
-    paths:
-      - /tmp/example-log-json.log
+- type: kafka
+  hosts:
+    - 159.89.11.176:31638           
+    - 159.89.11.176:32701            
+    - 159.89.11.176:30710     
+  topics:
+    - logs
+  group_id: filebeat
 
 processors:
   - decode_json_fields:
       fields:
         - message
-      target: "json"
+      max_depth: 1
+      target: ""
+      overwrite_keys: true
       add_error_key: true
 
 output.elasticsearch:

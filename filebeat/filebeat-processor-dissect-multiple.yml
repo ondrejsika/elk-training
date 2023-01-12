@@ -1,8 +1,9 @@
 filebeat.inputs:
   - type: filestream
     paths:
-      - /tmp/example-text.log
-      - /tmp/example-counter.log
+      - /tmp/example-log-json.log
+      - /tmp/example-log-text.log
+      - /tmp/example-log-counter.log
 
 processors:
   - if:
@@ -20,6 +21,19 @@ processors:
           ignore_failure: true
   - if:
       regexp:
+        message: "^{"
+    then:
+      - add_fields:
+          target: ""
+          fields:
+            message_type: json
+      - decode_json_fields:
+          fields:
+            - message
+          target: "json"
+          add_error_key: true
+  - if:
+      regexp:
         message: "^\\d+"
     then:
       - add_fields:
@@ -34,4 +48,6 @@ processors:
 
 output.elasticsearch:
   hosts:
-    - "localhost:9200"
+    - https://es.k8s.sikademo.com:443
+  username: elastic
+  password: 7gnOYMA70kbZ71A8D8U62ER2

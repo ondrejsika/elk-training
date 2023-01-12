@@ -1,7 +1,9 @@
 filebeat.inputs:
   - type: log
     paths:
-      - /tmp/default.log
+      - /tmp/default*.log
+
+# output.console:
 
 output.elasticsearch:
   hosts:

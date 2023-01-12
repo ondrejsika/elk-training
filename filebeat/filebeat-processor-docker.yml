@@ -4,7 +4,11 @@ filebeat.inputs:
       - "/var/lib/docker/containers/*/*.log"
     processors:
       - add_docker_metadata:
-          host: "unix:///var/run/docker.sock"
+
+processors:
+  - add_labels:
+      labels:
+        foo: bar
 
 output.elasticsearch:
   hosts:

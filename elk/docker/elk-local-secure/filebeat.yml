@@ -6,6 +6,6 @@ output.elasticsearch:
     - 127.0.0.1:9200
   protocol: https
   username: elastic
-  password: ${ELASTIC_PASSWORD:?Environment variable ELASTIC_PASSWORD is required}
+  password: s13EzEM=pCaR9Fx_=N9X
   ssl.certificate_authorities:
     - ./ca.crt

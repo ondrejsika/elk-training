@@ -1,14 +1,16 @@
 filebeat.inputs:
   - type: filestream
     paths:
-      - /tmp/example-text.log
+      - /tmp/example-log-text.log
 
 processors:
   - dissect:
-      tokenizer: "%{module} %{date} %{time} %{level} %{message}"
+      tokenizer: "%{prefix} %{date} %{time} %{level} %{message}"
       field: "message"
       target_prefix: "dissect"
 
 output.elasticsearch:
   hosts:
-    - "localhost:9200"
+    - https://es.k8s.sikademo.com:443
+  username: elastic
+  password: 7gnOYMA70kbZ71A8D8U62ER2

@@ -1,0 +1,24 @@
+filebeat.inputs:
+  - type: container
+    paths:
+      - "/var/lib/docker/containers/*/*.log"
+    processors:
+      - add_docker_metadata:
+          # host: "unix:///var/run/docker.sock"
+
+processors:
+  - add_labels:
+      labels:
+        foo: baz
+
+  - add_tags:
+      tags: [web, production]
+      target: "environment"
+
+
+
+output.elasticsearch:
+  hosts:
+    - https://es.k8s.sikademo.com:443
+  username: elastic
+  password: 7gnOYMA70kbZ71A8D8U62ER2

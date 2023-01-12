@@ -3,4 +3,5 @@ filebeat.inputs:
 
 output.elasticsearch:
   hosts:
-    - "127.0.0.1:9200"
+    - "lab0.sikademo.com:9200"
+  # allow_older_versions: true

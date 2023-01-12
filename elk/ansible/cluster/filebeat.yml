@@ -3,9 +3,11 @@ filebeat.inputs:
 
 output.elasticsearch:
   hosts:
-    - ${ELASTIC_IP:?Environment variable ELASTIC_IP is required}:9200
+    - 165.232.66.168:9200
+    - 159.89.97.154:9200
+    - 159.89.103.92:9200
   protocol: https
   username: elastic
-  password: ${ELASTIC_PASSWORD:?Environment variable ELASTIC_PASSWORD is required}
+  password: Li0GEipRkC2C6Sysy=NU
   ssl.certificate_authorities:
     - ./ca.crt

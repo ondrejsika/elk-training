@@ -24,8 +24,13 @@ resource "elasticstack_elasticsearch_security_role" "read" {
   name = "read"
 
   indices {
-    names      = ["filebeat-*"]
+    names      = ["kafka*"]
     privileges = ["read"]
+  }
+
+  indices {
+    names      = ["filebeat-*"]
+    privileges = ["all"]
   }
 
   applications {
@@ -41,18 +46,4 @@ resource "elasticstack_elasticsearch_security_user" "foo" {
   roles = [
     elasticstack_elasticsearch_security_role.read.name,
   ]
-  metadata = jsonencode({
-    "foo" = "bar"
-  })
-}
-
-resource "elasticstack_elasticsearch_security_user" "bar" {
-  username = "bar"
-  password = "asdfasdf"
-  roles = [
-    elasticstack_elasticsearch_security_role.read.name,
-  ]
-  metadata = jsonencode({
-    "foo" = "bar"
-  })
 }
