@@ -451,16 +451,27 @@ cat log-examples/multiline-java.txt | filebeat -c $(pwd)/filebeat/filebeat-multi
 
 - Conditions - https://www.elastic.co/guide/en/beats/filebeat/8.5/defining-processors.html#conditions
 
-### Add Labels
+### Add Labels & Tags
 
-[Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/add-labels.html)
+- [Docs: Add Labes](https://www.elastic.co/guide/en/beats/filebeat/8.5/add-labels.html)
+- [Docs: Add Tags](https://www.elastic.co/guide/en/beats/filebeat/8.5/add-tags.html)
+
+Labels and Tags
 
 ```
-slu loggen | filebeat -c $(pwd)/filebeat/filebeat-processor-add-labels.yml
+echo x | filebeat -c $(pwd)/filebeat/labels-and-tags.yml
 ```
 
+Labels
+
 ```
-slu loggen | filebeat -c $(pwd)/filebeat/filebeat-processor-add-labels.yml | jq .labels
+echo x | filebeat -c $(pwd)/filebeat/labels-and-tags.yml | jq .labels
+```
+
+Tags
+
+```
+echo x | filebeat -c $(pwd)/filebeat/labels-and-tags.yml | jq .tags
 ```
 
 ### Add Host Metadata
