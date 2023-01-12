@@ -1,11 +1,11 @@
 filebeat.inputs:
   - type: filestream
     paths:
-      - /tmp/example-text.log
+      - /tmp/example-log-text.log
 
 processors:
   - dissect:
-      tokenizer: "%{module} %{date} %{time} %{level} %{message}"
+      tokenizer: "%{prefix} %{date} %{time} %{level} %{message} (i=%{i|integer})"
       field: "message"
       target_prefix: "dissect"
 
