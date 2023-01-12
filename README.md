@@ -507,6 +507,14 @@ filebeat -c $(pwd)/filebeat/filebeat-processor-docker.yml -e
 
 [Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/add-kubernetes-metadata.html)
 
+#### Dissect
+
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/dissect.html)
+
+```
+echo 'xx 2023/01/12 17:42:40 WARN A warning that should be ignored is usually at this level and should be actionable. (i=1)' | filebeat -c $(pwd)/filebeat/filebeat-processor-dissect-2.yml | jq .dissect
+```
+
 ### Filebeat Modules
 
 [Docs (List of Modules)](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-modules.html) | [Docs (Configure Modules)](https://www.elastic.co/guide/en/beats/filebeat/current/configuration-filebeat-modules.html)
