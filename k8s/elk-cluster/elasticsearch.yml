@@ -3,6 +3,8 @@ kind: Elasticsearch
 metadata:
   name: main
   namespace: elk
+  annotations:
+    eck.k8s.elastic.co/license: basic
 spec:
   version: 8.5.0
   nodeSets:
