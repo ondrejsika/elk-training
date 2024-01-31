@@ -231,19 +231,17 @@ See:
 
 #### Install ECK
 
-Install CRDs
+<https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-install-helm.html>
 
 ```
-kubectl create -f https://download.elastic.co/downloads/eck/2.5.0/crds.yaml
+helm install \
+  elastic-operator \
+  --repo https://helm.elastic.co \
+  eck-operator \
+  -n elastic-system \
+  --create-namespace \
+  --wait
 ```
-
-Install Operator
-
-```
-kubectl apply -f https://download.elastic.co/downloads/eck/2.5.0/operator.yaml
-```
-
-Done.
 
 #### Setup `elk` & `filebeat` namespace
 
