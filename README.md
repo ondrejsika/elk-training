@@ -20,6 +20,12 @@
 - Cloud & On-Premise
 - Technologies: Git, Gitlab, Gitlab CI, Docker, Kubernetes, Terraform, Prometheus, ELK / EFK, Rancher, Proxmox, DigitalOcean, AWS
 
+## DevOps Kniha (Czech only)
+
+[![](./images/devops_kniha.jpg)](https://kniha.sika.io)
+
+<https://kniha.sika.io>
+
 ## Star, Create Issues, Fork, and Contribute
 
 Feel free to star this repository or fork it.
