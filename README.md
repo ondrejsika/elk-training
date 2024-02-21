@@ -20,6 +20,12 @@
 - Cloud & On-Premise
 - Technologies: Git, Gitlab, Gitlab CI, Docker, Kubernetes, Terraform, Prometheus, ELK / EFK, Rancher, Proxmox, DigitalOcean, AWS
 
+## DevOps Live (Czech only)
+
+[![](./images/devopslive_argocd.jpg)](https://devopslive.cz)
+
+<https://devopslive.cz>
+
 ## DevOps Kniha (Czech only)
 
 [![](./images/devops_kniha.jpg)](https://kniha.sika.io)
