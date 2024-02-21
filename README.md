@@ -329,7 +329,7 @@ See: https://kb.k8s.sikademo.com/app/management/security/users
 
 ## Install Filebeat
 
-[Docs](https://www.elastic.co/downloads/beats/filebeat) | [Quick Start Installation](https://www.elastic.co/guide/en/beats/filebeat/8.5/filebeat-installation-configuration.html#installation)
+[Docs](https://www.elastic.co/downloads/beats/filebeat) | [Quick Start Installation](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-installation-configuration.html#installation)
 
 ### Mac
 
@@ -354,7 +354,7 @@ slu install-bin filebeat
 
 ### Filebeat Inputs
 
-[Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/configuration-filebeat-options.html)
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/current/configuration-filebeat-options.html)
 
 - Log
 - Stdin
@@ -365,7 +365,7 @@ slu install-bin filebeat
 
 #### From file
 
-[Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/filebeat-input-log.html)
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-input-log.html)
 
 Run `slu loggen`
 
@@ -381,7 +381,7 @@ filebeat -c $(pwd)/filebeat/filebeat-input-log.yml -e
 
 #### From STDIN
 
-[Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/filebeat-input-stdin.html)
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-input-stdin.html)
 
 Run `slu loggen` & filebeat
 
@@ -413,7 +413,7 @@ filebeat -c $(pwd)/filebeat/filebeat-input-container.yml -e
 
 #### File
 
-[Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/console-output.html)
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/current/console-output.html)
 
 ```
 slu loggen | filebeat -c $(pwd)/filebeat/filebeat-output-file.yml -e
@@ -421,7 +421,7 @@ slu loggen | filebeat -c $(pwd)/filebeat/filebeat-output-file.yml -e
 
 #### Console
 
-[Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/console-output.html)
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/current/console-output.html)
 
 ```
 slu loggen | filebeat -c $(pwd)/filebeat/filebeat-output-console.yml -e
@@ -429,7 +429,7 @@ slu loggen | filebeat -c $(pwd)/filebeat/filebeat-output-console.yml -e
 
 ### Multiline Log Messages
 
-[Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/multiline-examples.html)
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/current/multiline-examples.html)
 
 #### Python Traceback Example
 
@@ -445,14 +445,14 @@ cat log-examples/multiline-java.txt | filebeat -c $(pwd)/filebeat/filebeat-multi
 
 ### Processors
 
-[Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/filtering-and-enhancing-data.html)
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/current/filtering-and-enhancing-data.html)
 
-- Conditions - https://www.elastic.co/guide/en/beats/filebeat/8.5/defining-processors.html#conditions
+- Conditions - https://www.elastic.co/guide/en/beats/filebeat/current/defining-processors.html#conditions
 
 ### Add Labels & Tags
 
-- [Docs: Add Labes](https://www.elastic.co/guide/en/beats/filebeat/8.5/add-labels.html)
-- [Docs: Add Tags](https://www.elastic.co/guide/en/beats/filebeat/8.5/add-tags.html)
+- [Docs: Add Labes](https://www.elastic.co/guide/en/beats/filebeat/current/add-labels.html)
+- [Docs: Add Tags](https://www.elastic.co/guide/en/beats/filebeat/current/add-tags.html)
 
 Labels and Tags
 
@@ -474,7 +474,7 @@ echo x | filebeat -c $(pwd)/filebeat/labels-and-tags.yml | jq .tags
 
 ### Add Host Metadata
 
-[Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/add-host-metadata.html)
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/current/add-host-metadata.html)
 
 ```
 echo hello | filebeat -c $(pwd)/filebeat/filebeat-processor-host.yml | jq .host
@@ -490,7 +490,7 @@ echo hello | filebeat -c $(pwd)/filebeat/filebeat-processor-host.yml | jq .host.
 
 #### Drop Fields
 
-[Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/drop-fields.html)
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/current/drop-fields.html)
 
 ```
 slu loggen | filebeat -c $(pwd)/filebeat/filebeat-processor-drop-fields.yml
@@ -498,7 +498,7 @@ slu loggen | filebeat -c $(pwd)/filebeat/filebeat-processor-drop-fields.yml
 
 #### Drop Event
 
-[Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/drop-event.html)
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/current/drop-event.html)
 
 ```
 slu loggen | filebeat -c $(pwd)/filebeat/filebeat-processor-drop-event.yml
@@ -506,7 +506,7 @@ slu loggen | filebeat -c $(pwd)/filebeat/filebeat-processor-drop-event.yml
 
 #### Add Docker Metadata
 
-[Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/add-docker-metadata.html)
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/current/add-docker-metadata.html)
 
 ```
 filebeat -c $(pwd)/filebeat/filebeat-processor-docker.yml -e
@@ -514,11 +514,11 @@ filebeat -c $(pwd)/filebeat/filebeat-processor-docker.yml -e
 
 #### Add Kubernetes Metadata
 
-[Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/add-kubernetes-metadata.html)
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/current/add-kubernetes-metadata.html)
 
 #### Dissect
 
-[Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/dissect.html)
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/current/dissect.html)
 
 ```
 echo 'xx 2023/01/12 17:42:40 WARN A warning that should be ignored is usually at this level and should be actionable. (i=1)' | filebeat -c $(pwd)/filebeat/filebeat-processor-dissect-2.yml | jq .dissect
@@ -538,7 +538,7 @@ filebeat -c $(pwd)/filebeat/filebeat-module-traefik.yml -e
 
 ### Filebeat Autodiscovery
 
-[Docs](https://www.elastic.co/guide/en/beats/filebeat/8.5/configuration-autodiscover.html)
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/current/configuration-autodiscover.html)
 
 ## Install Kafka
 
