@@ -701,6 +701,12 @@ http.response.status_code: (200 or 302)
 http.response.status_code:* and not http.response.status_code: (200 or 302)
 ```
 
+## ESQL
+
+- [Announcing Elastic’s piped query language, ES|QL](https://www.elastic.co/blog/esql-elasticsearch-piped-query-language) (blog post)
+- [ES|QL: The Elasticsearch Query Language](https://www.elastic.co/guide/en/elasticsearch/reference/current/esql.html) (docs)
+- [Getting started with ES|QL](https://www.elastic.co/guide/en/elasticsearch/reference/current/esql-getting-started.html)
+
 ## Spaces
 
 ![](./images/spaces/spaces-1.png)
