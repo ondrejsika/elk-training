@@ -755,3 +755,10 @@ That's it. Do you have any questions? **Let's go for a beer!**
 _Do you like the course? Write me recommendation on Twitter (with handle `@ondrejsika`) and LinkedIn (add me [/in/ondrejsika](https://www.linkedin.com/in/ondrejsika/) and I'll send you request for recommendation). **Thanks**._
 
 Wanna to go for a beer or do some work together? Just [book me](https://book-me.sika.io) :)
+
+## Training Sessions
+
+#### 2024-02-21 RPC SK
+
+- Elastic Stack managed by Terraform - https://github.com/sika-training-examples/2024-02-22-rpc-elastic-terraform-example
+- Filebeat examples - https://github.com/sika-training-examples/2024-02-21-rpc-elk-examples
