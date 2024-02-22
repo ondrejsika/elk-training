@@ -364,6 +364,20 @@ slu install-bin filebeat
 
 ## Fake Log Generators
 
+### slu loggen
+
+Plaintext log generator
+
+```
+slu loggen
+```
+
+JSON log generator
+
+```
+slu loggen --json
+```
+
 ## Filebeat
 
 ### Filebeat Inputs
