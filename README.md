@@ -378,6 +378,22 @@ JSON log generator
 slu loggen --json
 ```
 
+### Flog
+
+Source: https://github.com/mingrammer/flog
+
+Install on Mac
+
+```
+brew install mingrammer/flog/flog
+```
+
+Run
+
+```
+flog -d 100ms --loop
+```
+
 ## Filebeat
 
 ### Filebeat Inputs
