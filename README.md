@@ -362,6 +362,8 @@ or using `slu`:
 slu install-bin filebeat
 ```
 
+## Fake Log Generators
+
 ## Filebeat
 
 ### Filebeat Inputs
