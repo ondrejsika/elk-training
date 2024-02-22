@@ -394,6 +394,29 @@ Run
 flog -d 100ms --loop
 ```
 
+### Kubernetes/test/images/logs-generator
+
+Source: https://pkg.go.dev/k8s.io/Kubernetes/test/images/logs-generator
+
+Run in Docker
+
+```
+docker run -i \
+  -e "LOGS_GENERATOR_LINES_TOTAL=10" \
+  -e "LOGS_GENERATOR_DURATION=1s" \
+  gcr.io/google_containers/logs-generator:v0.1.1
+```
+
+Run in Kubernetes
+
+```
+kubectl run logs-generator \
+  --image=gcr.io/google_containers/logs-generator:v0.1.1 \
+  --restart=Never \
+  --env "LOGS_GENERATOR_LINES_TOTAL=1000" \
+  --env "LOGS_GENERATOR_DURATION=1m"
+```
+
 ## Filebeat
 
 ### Filebeat Inputs
