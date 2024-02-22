@@ -42,8 +42,6 @@ spec:
             mountPath: /var/log/containers
           - name: varlogpods
             mountPath: /var/log/pods
-          - name: varlibdockercontainers
-            mountPath: /var/lib/docker/containers
         volumes:
         - name: varlogcontainers
           hostPath:
@@ -51,9 +49,6 @@ spec:
         - name: varlogpods
           hostPath:
             path: /var/log/pods
-        - name: varlibdockercontainers
-          hostPath:
-            path: /var/lib/docker/containers
 ---
 apiVersion: v1
 kind: ServiceAccount
