@@ -463,7 +463,7 @@ slu loggen --log-prefix loggen-stdin | filebeat -c $(pwd)/filebeat/filebeat-inpu
 Run some Docker container
 
 ```
-docker run --name slu-loggen -d sikalabs/slu:v0.58.1 slu loggen --log-prefix loggen-container
+docker run --name slu-loggen -d sikalabs/slu:v0.74.0 slu loggen --log-prefix loggen-container
 docker run --name loop -d ondrejsika/infinite-counter
 ```
 
