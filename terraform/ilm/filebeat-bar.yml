@@ -3,7 +3,7 @@ filebeat.inputs:
 
 output.elasticsearch:
   hosts:
-    - https://es2.k8s.sikademo.com:443
+    - https://es.k8s.sikademo.com:443
   username: elastic
   password: rZ2jy82J4iYg6ll5c00I9uz5
 
