@@ -1,0 +1,40 @@
+resource "elasticstack_kibana_space" "tf" {
+  space_id = "tf"
+  name     = "Terraform Space"
+  disabled_features = [
+    "actions",
+    "advancedSettings",
+    "apm",
+    "canvas",
+    "dev_tools",
+    "discover",
+    "filesManagement",
+    "filesSharedImage",
+    "fleet",
+    "fleetv2",
+    "generalCases",
+    "guidedOnboardingFeature",
+    "indexPatterns",
+    "infrastructure",
+    "logs",
+    "maintenanceWindow",
+    "maps",
+    "ml",
+    "monitoring",
+    "observabilityCases",
+    "osquery",
+    "rulesSettings",
+    "savedObjectsManagement",
+    "savedObjectsTagging",
+    "savedQueryManagement",
+    "securitySolutionCases",
+    "siem",
+    "slo",
+    "stackAlerts",
+    "uptime",
+    "visualize",
+    "enterpriseSearch",
+    "ingestManager",
+  ]
+  initials = "TF"
+}
