@@ -3,4 +3,4 @@ filebeat.inputs:
 
 output.file:
   path: "/tmp/filebeat"
-  filename: default.jsonl
+  filename: default
