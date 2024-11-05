@@ -764,6 +764,22 @@ http.response.status_code:* and not http.response.status_code: (200 or 302)
 - [ES|QL: The Elasticsearch Query Language](https://www.elastic.co/guide/en/elasticsearch/reference/current/esql.html) (docs)
 - [Getting started with ES|QL](https://www.elastic.co/guide/en/elasticsearch/reference/current/esql-getting-started.html)
 
+```esql
+FROM logs-*-*
+```
+
+```esql
+FROM logs-*-* | limit 10
+```
+
+```esql
+FROM logs-*-* | WHERE container.name == "traefik-traefik-1" | limit 10
+```
+
+```
+FROM logs-*-* | WHERE container.name == "traefik-traefik-1" | SORT @timestamp DESC | limit 10
+```
+
 ## Spaces
 
 ![](./images/spaces/spaces-1.png)
