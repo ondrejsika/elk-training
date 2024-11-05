@@ -1,9 +1,13 @@
 filebeat.inputs:
-  - type: stdin
-    multiline:
-      pattern: "^[[:space:]]|^Caused by:"
-      negate: false
-      match: after
+  - type: filestream
+    paths:
+      - /tmp/java.log
+    parsers:
+      - multiline:
+          type: pattern
+          pattern: '^[[:space:]]+(at|\.{3})[[:space:]]+\b|^Caused by:'
+          negate: false
+          match: after
 
 processors:
   - drop_fields:
