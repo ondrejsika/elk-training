@@ -5,4 +5,6 @@ filebeat.inputs:
 
 output.elasticsearch:
   hosts:
-    - "localhost:9200"
+    - https://es.k8s.sikademo.com:443
+  username: elastic
+  password: elastic
