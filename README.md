@@ -837,6 +837,10 @@ Wanna to go for a beer or do some work together? Just [book me](https://book-me.
 
 ## Training Sessions
 
+#### 2024-11-04
+
+- Terraform Example - https://github.com/sika-training-examples/2024-11-05_elastic-terraform-example
+
 #### 2024-02-21 RPC SK
 
 - Elastic Stack managed by Terraform - https://github.com/sika-training-examples/2024-02-22-rpc-elastic-terraform-example
