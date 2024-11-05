@@ -1,0 +1,21 @@
+filebeat.inputs:
+  - type: filestream
+    paths:
+      - /tmp/java.log
+    parsers:
+      - multiline:
+          pattern: '^\s+|^Caused by:'  # Matches lines starting with whitespace or "Caused by:"
+          negate: false
+          match: after
+
+processors:
+  - drop_fields:
+      fields:
+        - agent
+        - log
+        - input
+        - ecs
+        - host
+
+output.console:
+  pretty: true
