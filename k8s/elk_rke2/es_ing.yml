@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: es
+  namespace: elk
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - es.rke2.sikademo.com
+      secretName: es.rke2.sikademo.com-tls
+  rules:
+    - host: es.rke2.sikademo.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: main-es-http
+                port:
+                  number: 9200

@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: kb
+  namespace: elk
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - kb.rke2.sikademo.com
+      secretName: kb.rke2.sikademo.com-tls
+  rules:
+    - host: kb.rke2.sikademo.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: main-kb-http
+                port:
+                  number: 5601
