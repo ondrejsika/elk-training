@@ -227,10 +227,10 @@ Source: [ondrejsika/terraform-demo-elk](https://github.com/ondrejsika/terraform-
 
 See:
 
-- http://elk.sikademo.com:9200
-- http://elk.sikademo.com:5601
-- https://es.elk.sikademo.com
-- https://kb.elk.sikademo.com
+- http://elk-docker.sikademo.com:9200
+- http://elk-docker.sikademo.com:5601
+- https://es.elk-docker.sikademo.com
+- https://kb.elk-docker.sikademo.com
 
 ### Using Kubernetes
 
