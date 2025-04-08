@@ -4,6 +4,22 @@
 
 # ELK / Log Management Training
 
+## About Course
+
+- [ELK Training in Czech Republic](https://ondrej-sika.cz/skoleni/elk)
+- [ELK Training in Europe & Middle East](https://ondrej-sika.com/training/elk)
+
+### Any Questions?
+
+Write me mail to <ondrej@sika.io>
+
+### Related Courses
+
+- [Kubernetes Training in Czech Republic](https://ondrej-sika.cz/skoleni/kubernetes)
+- [Loki Training in Czech Republic](https://ondrej-sika.cz/skoleni/loki) (Log management in Grafana)
+- [Kubernetes Training in Europe & Middle East](https://ondrej-sika.com/training/kubernetes)
+- [Loki Training in Europe & Middle East](https://ondrej-sika.com/training/kubernetes) (Log management in Grafana)
+
 ## Related repositories
 
 - Demo ELK on Digital Ocean - https://github.com/ondrejsika/terraform-demo-elk
