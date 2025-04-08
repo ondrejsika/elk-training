@@ -1,9 +1,8 @@
 [Ondrej Sika (sika.io)](https://sika.io) | <ondrej@sika.io>
 
-# ELK / Log Management Training
+![](./images/elastic_banner.svg)
 
-    Ondrej Sika <ondrej@ondrejsika.com>
-    https://github.com/ondrejsika/elk-training
+# ELK / Log Management Training
 
 ## Related repositories
 
