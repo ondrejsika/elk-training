@@ -55,7 +55,7 @@ For sharing links & "secrets".
 - Install Elasticsearch & Kibana
   - Debian
   - Using Docker
-  - Kubernetes
+  - Kubernetes (preferred)
 - Filebeat
   - Install
   - Configuration
