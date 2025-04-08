@@ -10,7 +10,7 @@ metadata:
   namespace: filebeat
 spec:
   type: filebeat
-  version: 8.15.3
+  version: 8.17.4
   config:
     output:
       elasticsearch:
