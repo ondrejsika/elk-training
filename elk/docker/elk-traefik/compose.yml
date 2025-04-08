@@ -7,7 +7,7 @@ services:
     labels:
       traefik.enable: true
       traefik.http.services.elasticsearch.loadbalancer.server.port: 9200
-      traefik.http.routers.elasticsearch.rule: Host(`es.elk-docker.sikademo.com`)
+      traefik.http.routers.elasticsearch.rule: Host(`${ELASTICSEARCH_HOST:-es.elk-docker.sikademo.com}`)
       traefik.http.routers.elasticsearch.entrypoints: http,https
       traefik.http.routers.elasticsearch.tls.certresolver: le
     networks:
@@ -20,7 +20,7 @@ services:
     labels:
       traefik.enable: true
       traefik.http.services.kibana.loadbalancer.server.port: 5601
-      traefik.http.routers.kibana.rule: Host(`kb.elk-docker.sikademo.com`)
+      traefik.http.routers.kibana.rule: Host(`${KIBANA_HOST:-kb.elk-docker.sikademo.com}`)
       traefik.http.routers.kibana.entrypoints: http,https
       traefik.http.routers.kibana.tls.certresolver: le
     networks:
