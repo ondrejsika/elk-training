@@ -44,6 +44,7 @@ Also feel free to propose improvements by creating issues.
 
 For sharing links & "secrets".
 
+- Zoom Chat
 - Slack - https://sikapublic.slack.com/
 - Microsoft Teams
 - https://sika.link/chat (tlk.io)
