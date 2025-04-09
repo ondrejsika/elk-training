@@ -277,13 +277,13 @@ kubectl apply -f ./k8s/ns.yml
 #### Install Single Node Elasticsearch & Kibana
 
 ```
-kubectl apply -f ./k8s/elk-single-node
+kubectl apply -f ./k8s/elk_single_node
 ```
 
 Wait until Elasticsearch and Kibana will be GREEN
 
 ```
-kubectl get -f ./k8s/elk-single-node
+kubectl get -f ./k8s/elk_single_node
 ```
 
 Get password for user `elastic`
@@ -313,13 +313,13 @@ filebeat -c `pwd`/filebeat/filebeat-k8s-test.yml -e
 #### Upgrade to Elasticsearch Cluster
 
 ```
-kubectl get -f ./k8s/elk-cluster
+kubectl get -f ./k8s/elk_cluster
 ```
 
 Wait until Elasticsearch and Kibana will be GREEN
 
 ```
-kubectl get -f ./k8s/elk-cluster
+kubectl get -f ./k8s/elk_cluster
 ```
 
 See:
