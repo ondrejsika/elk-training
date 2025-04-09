@@ -22,3 +22,6 @@ filebeat:
 
 filebeat-verbose:
 	filebeat -c $(shell pwd)/filebeat.yml -e
+
+filebeat-loggen:
+	slu loggen | filebeat -c $(shell pwd)/filebeat.yml
