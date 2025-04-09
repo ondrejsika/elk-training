@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: main
+  name: elk
   namespace: elk
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt
@@ -11,7 +11,7 @@ spec:
     - hosts:
         - es.k8s.sikademo.com
         - kb.k8s.sikademo.com
-      secretName: main-tls
+      secretName: elk-tls
   rules:
     - host: es.k8s.sikademo.com
       http:
@@ -20,7 +20,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: main-es-http
+                name: elk-es-http
                 port:
                   number: 9200
     - host: kb.k8s.sikademo.com
@@ -30,6 +30,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: main-kb-http
+                name: elk-kb-http
                 port:
                   number: 5601
