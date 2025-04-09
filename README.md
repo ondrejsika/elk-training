@@ -204,6 +204,18 @@ TOKEN=
 sudo /bin/systemctl enable kibana.service --now
 ```
 
+HTTP CA is on `/etc/elasticsearch/certs/http_ca.crt`
+
+You can try ES from curl
+
+```
+PASSWORD=
+```
+
+```
+curl --cacert /etc/elasticsearch/certs/http_ca.crt https://elastic:$PASSWORD@127.0.0.1:9200
+```
+
 ### Using Docker
 
 Simple single node installation for development
