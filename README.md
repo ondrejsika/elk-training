@@ -141,15 +141,7 @@ vim /etc/elasticsearch/elasticsearch.yml
 ```
 
 ```
-sudo /bin/systemctl daemon-reload
-```
-
-```
-sudo /bin/systemctl enable elasticsearch.service
-```
-
-```
-sudo /bin/systemctl start elasticsearch.service
+sudo /bin/systemctl enable elasticsearch.service --now
 ```
 
 Reset `elastic` user password
@@ -179,15 +171,7 @@ export TOKEN=
 ```
 
 ```
-sudo /bin/systemctl daemon-reload
-```
-
-```
-sudo /bin/systemctl enable elasticsearch.service
-```
-
-```
-sudo /bin/systemctl start elasticsearch.service
+sudo /bin/systemctl enable elasticsearch.service --now
 ```
 
 Install Kibana
@@ -217,15 +201,7 @@ TOKEN=
 ```
 
 ```
-sudo /bin/systemctl daemon-reload
-```
-
-```
-sudo /bin/systemctl enable kibana.service
-```
-
-```
-sudo /bin/systemctl start kibana.service
+sudo /bin/systemctl enable kibana.service --now
 ```
 
 ### Using Docker
