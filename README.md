@@ -289,13 +289,13 @@ kubectl get -f ./k8s/elk-single-node
 Get password for user `elastic`
 
 ```
-kubectl -n elk get secret main-es-elastic-user -o=jsonpath='{.data.elastic}' | base64 --decode; echo
+kubectl -n elk get secret elk-es-elastic-user -o=jsonpath='{.data.elastic}' | base64 --decode; echo
 ```
 
 or using `slu`:
 
 ```
-slu eck elastic-password -n elk -e main
+slu eck elastic-password -n elk -e elk
 ```
 
 See:
