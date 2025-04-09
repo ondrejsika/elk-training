@@ -250,13 +250,13 @@ See:
 #### Elastic Cloud on Kubernetes
 
 - Intro - https://www.elastic.co/elastic-cloud-kubernetes
-- Docs / Tutorial - https://www.elastic.co/guide/en/cloud-on-k8s/current/index.html
-- Deploy ECK - https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-deploy-eck.html
+- Docs / Tutorial - https://www.elastic.co/guide/en/cloud-on-examples/k8s/current/index.html
+- Deploy ECK - https://www.elastic.co/guide/en/cloud-on-examples/k8s/current/k8s-deploy-eck.html
 - Github - https://github.com/elastic/cloud-on-k8s
 
 #### Install ECK
 
-<https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-install-helm.html>
+<https://www.elastic.co/guide/en/cloud-on-examples/k8s/current/k8s-install-helm.html>
 
 ```
 helm install \
@@ -271,19 +271,19 @@ helm install \
 #### Setup `elk` & `filebeat` namespace
 
 ```
-kubectl apply -f ./k8s/ns.yml
+kubectl apply -f ./examples/k8s/ns.yml
 ```
 
 #### Install Single Node Elasticsearch & Kibana
 
 ```
-kubectl apply -f ./k8s/elk_single_node
+kubectl apply -f ./examples/k8s/elk_single_node
 ```
 
 Wait until Elasticsearch and Kibana will be GREEN
 
 ```
-kubectl get -f ./k8s/elk_single_node
+kubectl get -f ./examples/k8s/elk_single_node
 ```
 
 Get password for user `elastic`
@@ -313,13 +313,13 @@ filebeat -c `pwd`/filebeat/filebeat-k8s-test.yml -e
 #### Upgrade to Elasticsearch Cluster
 
 ```
-kubectl get -f ./k8s/elk_cluster
+kubectl get -f ./examples/k8s/elk_cluster
 ```
 
 Wait until Elasticsearch and Kibana will be GREEN
 
 ```
-kubectl get -f ./k8s/elk_cluster
+kubectl get -f ./examples/k8s/elk_cluster
 ```
 
 See:
@@ -643,7 +643,7 @@ kubectl get pod -n kafka
 Install Kafka Cluster
 
 ```
-kubectl apply -f ./k8s/kafka
+kubectl apply -f ./examples/k8s/kafka
 ```
 
 See Kafka Cluster
@@ -655,7 +655,7 @@ kubectl get -n kafka kafka
 Get Bootstrap Node
 
 ```
-kubectl describe -f k8s/kafka | grep "Bootstrap Servers"
+kubectl describe -f examples/k8s/kafka | grep "Bootstrap Servers"
 ```
 
 Setup `kaf` - Kafka CLI
