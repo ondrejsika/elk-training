@@ -210,7 +210,7 @@ Simple single node installation for development
 
 ```
 cd elk/docker/elk-local
-docker-compose up -d
+docker compose up -d
 ```
 
 ### Demo ELK on Digital Ocean
