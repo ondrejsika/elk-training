@@ -7,7 +7,7 @@ spec:
   type: filebeat
   version: 8.17.4
   elasticsearchRef:
-    name: main
+    name: elk
   config:
     filebeat:
       autodiscover:
