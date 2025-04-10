@@ -337,7 +337,7 @@ See:
 - Role - https://registry.terraform.io/providers/elastic/elasticstack/latest/docs/resources/elasticsearch_security_role
 
 ```
-cd terraform/users
+cd ./examples/terraform/users
 ```
 
 Create `main.auto.tfvars` ...
