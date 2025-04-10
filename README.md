@@ -456,7 +456,7 @@ slu loggen --log-file /tmp/default.log --log-prefix loggen-file
 Run filebeat
 
 ```
-filebeat -c $(pwd)/filebeat/filebeat-input-log.yml -e
+filebeat -c $(pwd)/examples/filebeat/filebeat-input-log.yml -e
 ```
 
 #### From STDIN
@@ -466,7 +466,7 @@ filebeat -c $(pwd)/filebeat/filebeat-input-log.yml -e
 Run `slu loggen` & filebeat
 
 ```
-slu loggen --log-prefix loggen-stdin | filebeat -c $(pwd)/filebeat/filebeat-input-stdin.yml -e
+slu loggen --log-prefix loggen-stdin | filebeat -c $(pwd)/examples/filebeat/filebeat-input-stdin.yml -e
 ```
 
 #### From Container
@@ -481,7 +481,7 @@ docker run --name loop -d ondrejsika/infinite-counter
 ```
 
 ```
-filebeat -c $(pwd)/filebeat/filebeat-input-container.yml -e
+filebeat -c $(pwd)/examples/filebeat/filebeat-input-container.yml -e
 ```
 
 ### Filebeat Outputs
@@ -496,7 +496,7 @@ filebeat -c $(pwd)/filebeat/filebeat-input-container.yml -e
 [Docs](https://www.elastic.co/guide/en/beats/filebeat/current/console-output.html)
 
 ```
-slu loggen | filebeat -c $(pwd)/filebeat/filebeat-output-file.yml -e
+slu loggen | filebeat -c $(pwd)/examples/filebeat/filebeat-output-file.yml -e
 ```
 
 #### Console
@@ -504,7 +504,7 @@ slu loggen | filebeat -c $(pwd)/filebeat/filebeat-output-file.yml -e
 [Docs](https://www.elastic.co/guide/en/beats/filebeat/current/console-output.html)
 
 ```
-slu loggen | filebeat -c $(pwd)/filebeat/filebeat-output-console.yml -e
+slu loggen | filebeat -c $(pwd)/examples/filebeat/filebeat-output-console.yml -e
 ```
 
 ### Multiline Log Messages
@@ -514,13 +514,13 @@ slu loggen | filebeat -c $(pwd)/filebeat/filebeat-output-console.yml -e
 #### Python Traceback Example
 
 ```
-cat examples/logs/multiline_python.txt | filebeat -c $(pwd)/filebeat/filebeat-multiline-python.yml | jq .message
+cat examples/logs/multiline_python.txt | filebeat -c $(pwd)/examples/filebeat/filebeat-multiline-python.yml | jq .message
 ```
 
 #### Java Traceback Example
 
 ```
-cat examples/logs/multiline_java.txt | filebeat -c $(pwd)/filebeat/filebeat-multiline-java.yml | jq .message
+cat examples/logs/multiline_java.txt | filebeat -c $(pwd)/examples/filebeat/filebeat-multiline-java.yml | jq .message
 ```
 
 ### Processors
@@ -557,15 +557,15 @@ echo x | filebeat -c $(pwd)/filebeat/labels-and-tags.yml | jq .tags
 [Docs](https://www.elastic.co/guide/en/beats/filebeat/current/add-host-metadata.html)
 
 ```
-echo hello | filebeat -c $(pwd)/filebeat/filebeat-processor-host.yml | jq .host
+echo hello | filebeat -c $(pwd)/examples/filebeat/filebeat-processor-host.yml | jq .host
 ```
 
 ```
-echo hello | filebeat -c $(pwd)/filebeat/filebeat-processor-host.yml | jq .host.hostname
+echo hello | filebeat -c $(pwd)/examples/filebeat/filebeat-processor-host.yml | jq .host.hostname
 ```
 
 ```
-echo hello | filebeat -c $(pwd)/filebeat/filebeat-processor-host.yml | jq .host.os
+echo hello | filebeat -c $(pwd)/examples/filebeat/filebeat-processor-host.yml | jq .host.os
 ```
 
 #### Drop Fields
@@ -573,7 +573,7 @@ echo hello | filebeat -c $(pwd)/filebeat/filebeat-processor-host.yml | jq .host.
 [Docs](https://www.elastic.co/guide/en/beats/filebeat/current/drop-fields.html)
 
 ```
-slu loggen | filebeat -c $(pwd)/filebeat/filebeat-processor-drop-fields.yml
+slu loggen | filebeat -c $(pwd)/examples/filebeat/filebeat-processor-drop-fields.yml
 ```
 
 #### Drop Event
@@ -581,7 +581,7 @@ slu loggen | filebeat -c $(pwd)/filebeat/filebeat-processor-drop-fields.yml
 [Docs](https://www.elastic.co/guide/en/beats/filebeat/current/drop-event.html)
 
 ```
-slu loggen | filebeat -c $(pwd)/filebeat/filebeat-processor-drop-event.yml
+slu loggen | filebeat -c $(pwd)/examples/filebeat/filebeat-processor-drop-event.yml
 ```
 
 #### Add Docker Metadata
@@ -589,7 +589,7 @@ slu loggen | filebeat -c $(pwd)/filebeat/filebeat-processor-drop-event.yml
 [Docs](https://www.elastic.co/guide/en/beats/filebeat/current/add-docker-metadata.html)
 
 ```
-filebeat -c $(pwd)/filebeat/filebeat-processor-docker.yml -e
+filebeat -c $(pwd)/examples/filebeat/filebeat-processor-docker.yml -e
 ```
 
 #### Add Kubernetes Metadata
@@ -603,7 +603,7 @@ filebeat -c $(pwd)/filebeat/filebeat-processor-docker.yml -e
 - https://dissect-tester.jorgelbg.me/ - Dissect Tester
 
 ```
-echo 'xx 2023/01/12 17:42:40 WARN A warning that should be ignored is usually at this level and should be actionable. (i=1)' | filebeat -c $(pwd)/filebeat/filebeat-processor-dissect-2.yml | jq .dissect
+echo 'xx 2023/01/12 17:42:40 WARN A warning that should be ignored is usually at this level and should be actionable. (i=1)' | filebeat -c $(pwd)/examples/filebeat/filebeat-processor-dissect-2.yml | jq .dissect
 ```
 
 ### Filebeat Modules
@@ -615,7 +615,7 @@ Filebeat modules simplify the collection, parsing, and visualization of common l
 #### Traefik Example
 
 ```
-filebeat -c $(pwd)/filebeat/filebeat-module-traefik.yml -e
+filebeat -c $(pwd)/examples/filebeat/filebeat-module-traefik.yml -e
 ```
 
 ### Filebeat Autodiscovery
@@ -722,7 +722,7 @@ export KAFKA_NODE=$BOOTSTRAP_NODE
 Run filebeat
 
 ```
-slu loggen --log-prefix loggen-kafka | filebeat -c $(pwd)/filebeat/filebeat-output-kafka.yml -e
+slu loggen --log-prefix loggen-kafka | filebeat -c $(pwd)/examples/filebeat/filebeat-output-kafka.yml -e
 ```
 
 Describe topic logs
@@ -734,13 +734,13 @@ kaf topic describe logs
 Read logs from Kafka
 
 ```
-filebeat -c $(pwd)/filebeat/filebeat-input-kafka.yml
+filebeat -c $(pwd)/examples/filebeat/filebeat-input-kafka.yml
 ```
 
 Read only message form Kafka logs
 
 ```
-filebeat -c $(pwd)/filebeat/filebeat-input-kafka.yml | jq -r '.message'
+filebeat -c $(pwd)/examples/filebeat/filebeat-input-kafka.yml | jq -r '.message'
 ```
 
 See groups
