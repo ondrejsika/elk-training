@@ -628,6 +628,12 @@ filebeat -c $(pwd)/filebeat/filebeat-module-traefik.yml -e
 kubectl apply -f ./examples/k8s/filebeat/filebeat.yml
 ```
 
+or install on cluster without ECK ES and send data to external ES
+
+```
+kubectl apply -f ./examples/k8s/filebeat/filebeat_ext.yml
+```
+
 ## Install Kafka
 
 Install Strimzi - Kafka Operator
