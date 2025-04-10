@@ -37,9 +37,9 @@ Write me mail to <ondrej@sika.io>
 
 ## DevOps Live (Czech only)
 
-[![](./images/devopslive_argocd.jpg)](https://devopslive.cz)
+[![](./images/devopslive_argocd.jpg)](https://ondrej-sika.cz/devopslive)
 
-<https://devopslive.cz>
+<https://ondrej-sika.cz/devopslive>
 
 ## DevOps Kniha (Czech only)
 
