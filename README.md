@@ -717,6 +717,12 @@ export KAFKA_NODE=134.122.89.34:31031
 slu loggen --log-prefix loggen-kafka | filebeat -c $(pwd)/filebeat/filebeat-output-kafka.yml -e
 ```
 
+Describe topic logs
+
+```
+kaf topic describe logs
+```
+
 Read logs from Kafka
 
 ```
