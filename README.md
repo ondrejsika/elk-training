@@ -26,7 +26,7 @@ Write me mail to <ondrej@sika.io>
 
 ## Course
 
-## About Me - Ondrej Sika
+## About Me - [Ondrej Sika](https://sika.io)
 
 **Freelance DevOps Engineer, Consultant & Lecturer**
 
