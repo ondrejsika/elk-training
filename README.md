@@ -743,6 +743,18 @@ Read only message form Kafka logs
 filebeat -c $(pwd)/filebeat/filebeat-input-kafka.yml | jq -r '.message'
 ```
 
+See groups
+
+```
+kaf groups
+```
+
+describe filebeat group
+
+```
+kaf group describe filebeat
+```
+
 ## Kibana
 
 ### Kibana Query Language
