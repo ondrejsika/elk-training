@@ -9,6 +9,9 @@
 
 ca.crt
 
+# /data is used for filebeats using --path.data data/...
+/data
+
 # Terraform
 .terraform
 *.tfstate
