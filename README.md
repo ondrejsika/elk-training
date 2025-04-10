@@ -514,13 +514,13 @@ slu loggen | filebeat -c $(pwd)/filebeat/filebeat-output-console.yml -e
 #### Python Traceback Example
 
 ```
-cat log-examples/multiline-python.txt | filebeat -c $(pwd)/filebeat/filebeat-multiline-python.yml | jq .message
+cat examples/logs/multiline_python.txt | filebeat -c $(pwd)/filebeat/filebeat-multiline-python.yml | jq .message
 ```
 
 #### Java Traceback Example
 
 ```
-cat log-examples/multiline-java.txt | filebeat -c $(pwd)/filebeat/filebeat-multiline-java.yml | jq .message
+cat examples/logs/multiline_java.txt | filebeat -c $(pwd)/filebeat/filebeat-multiline-java.yml | jq .message
 ```
 
 ### Processors
