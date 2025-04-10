@@ -507,6 +507,18 @@ slu loggen | filebeat -c $(pwd)/examples/filebeat/filebeat-output-file.yml -e
 slu loggen | filebeat -c $(pwd)/examples/filebeat/filebeat-output-console.yml -e
 ```
 
+Only logs
+
+```
+slu loggen | filebeat -c $(pwd)/examples/filebeat/filebeat-output-console.yml
+```
+
+Only message
+
+```
+slu loggen | filebeat -c $(pwd)/examples/filebeat/filebeat-output-console.yml | jq .message
+```
+
 ### Multiline Log Messages
 
 [Docs](https://www.elastic.co/guide/en/beats/filebeat/current/multiline-examples.html)
