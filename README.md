@@ -622,6 +622,12 @@ filebeat -c $(pwd)/filebeat/filebeat-module-traefik.yml -e
 
 [Docs](https://www.elastic.co/guide/en/beats/filebeat/current/configuration-autodiscover.html)
 
+## Install Filebeat on Kubernetes
+
+```
+kubectl apply -f ./examples/k8s/filebeat/filebeat.yml
+```
+
 ## Install Kafka
 
 Install Strimzi - Kafka Operator
