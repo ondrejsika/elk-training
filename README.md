@@ -221,18 +221,18 @@ curl --cacert /etc/elasticsearch/certs/http_ca.crt https://elastic:$ELASTIC_PASS
 Simple single node installation for development (without auth)
 
 ```
-cd elk/docker/elk-local
+cd examples/docker/elk-local
 docker compose up -d
 ```
 
 Simple single node installation with auth and https
 
 ```
-cd elk/docker/elk-local-secure
+cd examples/docker/elk-local-secure
 docker compose up -d
 ```
 
-and see [Makefile](elk/docker/elk-local-secure/Makefile)
+and see [Makefile](examples/docker/elk-local-secure/Makefile)
 
 ### Demo ELK on Digital Ocean
 
