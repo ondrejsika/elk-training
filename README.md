@@ -713,6 +713,14 @@ Example
 export KAFKA_NODE=134.122.89.34:31031
 ```
 
+or
+
+```
+export KAFKA_NODE=$BOOTSTRAP_NODE
+```
+
+Run filebeat
+
 ```
 slu loggen --log-prefix loggen-kafka | filebeat -c $(pwd)/filebeat/filebeat-output-kafka.yml -e
 ```
