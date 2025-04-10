@@ -268,7 +268,7 @@ helm install \
   --wait
 ```
 
-#### Setup `elk` & `filebeat` namespace
+#### Create elk namespace
 
 ```
 kubectl apply -f ./examples/k8s/ns.yml
