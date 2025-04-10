@@ -44,6 +44,7 @@ apiVersion: kafka.strimzi.io/v1beta2
 kind: KafkaTopic
 metadata:
   name: kafka-logs
+  namespace: kafka
   labels:
     strimzi.io/cluster: kafka
 spec:
