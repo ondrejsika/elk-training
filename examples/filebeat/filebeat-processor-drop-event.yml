@@ -2,6 +2,10 @@ filebeat.inputs:
   - type: stdin
 
 processors:
+  - drop_event:
+      when:
+        regexp:
+          message: "DEBUG|INFO"
   - drop_fields:
       fields:
         - agent
@@ -9,10 +13,6 @@ processors:
         - input
         - ecs
         - host
-  - drop_event:
-      when:
-        regexp:
-          message: "DEBUG|INFO"
 
 output.console:
   pretty: true
