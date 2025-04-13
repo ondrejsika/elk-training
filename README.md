@@ -549,19 +549,19 @@ cat examples/logs/multiline_java.txt | filebeat -c $(pwd)/examples/filebeat/file
 Labels and Tags
 
 ```
-echo x | filebeat -c $(pwd)/filebeat/labels-and-tags.yml
+echo x | filebeat -c $(pwd)/examples/filebeat/labels-and-tags.yml
 ```
 
 Labels
 
 ```
-echo x | filebeat -c $(pwd)/filebeat/labels-and-tags.yml | jq .labels
+echo x | filebeat -c $(pwd)/examples/filebeat/labels-and-tags.yml | jq .labels
 ```
 
 Tags
 
 ```
-echo x | filebeat -c $(pwd)/filebeat/labels-and-tags.yml | jq .tags
+echo x | filebeat -c $(pwd)/examples/filebeat/labels-and-tags.yml | jq .tags
 ```
 
 ### Add Host Metadata
