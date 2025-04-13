@@ -900,6 +900,11 @@ Wanna to go for a beer or do some work together? Just [book me](https://book-me.
 
 ## Training Sessions
 
+#### 2025-04-11 CEZ
+
+- ArgoCD with ECK Example - https://github.com/sika-training-examples/2025-05-10_argocd-apps-cez-example
+- ELK Terraform Example - https://github.com/sika-training-examples/2025-04-11_cez-elk-terraform-example
+
 #### 2024-11-04
 
 - Terraform Example - https://github.com/sika-training-examples/2024-11-05_elastic-terraform-example
