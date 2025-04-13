@@ -3,6 +3,13 @@ kind: Namespace
 metadata:
   name: filebeat
 ---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: elastic-password
+stringData:
+  ELASTIC_PASSWORD: Ad520RH6e5wQ2E1oN104WDpS
+---
 apiVersion: beat.k8s.elastic.co/v1beta1
 kind: Beat
 metadata:
@@ -18,7 +25,7 @@ spec:
           - https://es.k8s.sikademo.com:443
         protocol: https
         username: elastic
-        password: elastic
+        password: ${ELASTIC_PASSWORD}
     filebeat:
       autodiscover:
         providers:
@@ -47,6 +54,11 @@ spec:
               fieldRef:
                 apiVersion: v1
                 fieldPath: spec.nodeName
+          - name: ELASTIC_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: elastic-password
+                key: ELASTIC_PASSWORD
           volumeMounts:
           - name: varlogcontainers
             mountPath: /var/log/containers
