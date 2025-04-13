@@ -8,6 +8,7 @@
 *.local.txt
 
 ca.crt
+/filebeat.yml
 
 # /data is used for filebeats using --path.data data/...
 /data
