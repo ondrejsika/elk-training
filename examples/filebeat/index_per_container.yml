@@ -1,0 +1,17 @@
+filebeat.inputs:
+  - type: container
+    paths:
+      - "/var/lib/docker/containers/*/*.log"
+    processors:
+      - add_docker_metadata:
+
+output.elasticsearch:
+  hosts:
+    - https://es.k8s.sikademo.com:443
+  username: elastic
+  password: elastic
+
+  index: "mylogs-%{[container.name]}"
+
+setup.template.name: "mylogs"
+setup.template.pattern: "mylogs-*"
