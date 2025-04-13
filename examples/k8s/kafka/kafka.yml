@@ -28,7 +28,7 @@ spec:
       volumes:
         - id: 0
           type: persistent-claim
-          size: 1Gi
+          size: 2Gi
           deleteClaim: false
   zookeeper:
     replicas: 3
