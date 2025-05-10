@@ -256,7 +256,7 @@ See:
 
 #### Install ECK
 
-<https://www.elastic.co/guide/en/cloud-on-examples/k8s/current/k8s-install-helm.html>
+<https://www.elastic.co/docs/deploy-manage/deploy/cloud-on-k8s/install-using-helm-chart>
 
 ```
 helm install \
