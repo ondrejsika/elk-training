@@ -6,7 +6,7 @@ metadata:
   annotations:
     eck.k8s.elastic.co/license: basic
 spec:
-  version: 8.17.4
+  version: 9.0.1
   nodeSets:
     - name: master
       count: 1
