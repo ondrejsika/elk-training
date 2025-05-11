@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: elk-es-elastic-user
+  namespace: elk
+type: Opaque
+stringData:
+  elastic: elastic
