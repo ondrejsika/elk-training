@@ -8,7 +8,7 @@ kind: Secret
 metadata:
   name: elastic-password
 stringData:
-  ELASTIC_PASSWORD: Ad520RH6e5wQ2E1oN104WDpS
+  ELASTIC_PASSWORD: elastic
 ---
 apiVersion: beat.k8s.elastic.co/v1beta1
 kind: Beat

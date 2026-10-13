@@ -5,7 +5,7 @@ output.elasticsearch:
   hosts:
     - https://es.k8s.sikademo.com:443
   username: elastic
-  password: rZ2jy82J4iYg6ll5c00I9uz5
+  password: elastic
 
   index: "foo"
 

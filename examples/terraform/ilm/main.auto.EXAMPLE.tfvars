@@ -1,1 +1,1 @@
-elasticstack_elasticsearch_password = "xxx"
+elasticstack_elasticsearch_password = "elastic"
