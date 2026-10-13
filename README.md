@@ -141,7 +141,7 @@ sudo apt-get update && sudo apt-get install elasticsearch=9.5.5
 
 Initial node
 
-Set `cluter.name` and listen on all interfaces (`network.host`) in `/etc/elasticsearch/elasticsearch.yml`
+Set `cluster.name` and listen on all interfaces (`network.host`) in `/etc/elasticsearch/elasticsearch.yml`
 
 ```
 vim /etc/elasticsearch/elasticsearch.yml
@@ -163,7 +163,7 @@ Reset `elastic` user password
 
 or join cluster
 
-Set `cluter.name` in `/etc/elasticsearch/elasticsearch.yml`
+Set `cluster.name` in `/etc/elasticsearch/elasticsearch.yml`
 
 ```
 vim /etc/elasticsearch/elasticsearch.yml
@@ -550,7 +550,7 @@ cat examples/logs/multiline_java.txt | filebeat -c $(pwd)/examples/filebeat/file
 
 ### Add Labels & Tags
 
-- [Docs: Add Labes](https://www.elastic.co/guide/en/beats/filebeat/current/add-labels.html)
+- [Docs: Add Labels](https://www.elastic.co/guide/en/beats/filebeat/current/add-labels.html)
 - [Docs: Add Tags](https://www.elastic.co/guide/en/beats/filebeat/current/add-tags.html)
 
 Labels and Tags
@@ -756,7 +756,7 @@ Read logs from Kafka
 filebeat -c $(pwd)/examples/filebeat/filebeat-input-kafka.yml
 ```
 
-Read only message form Kafka logs
+Read only message from Kafka logs
 
 ```
 filebeat -c $(pwd)/examples/filebeat/filebeat-input-kafka.yml | jq -r '.message'
@@ -903,7 +903,7 @@ That's it. Do you have any questions? **Let's go for a beer!**
 
 _Do you like the course? Write me recommendation on Twitter (with handle `@ondrejsika`) and LinkedIn (add me [/in/ondrejsika](https://www.linkedin.com/in/ondrejsika/) and I'll send you request for recommendation). **Thanks**._
 
-Wanna to go for a beer or do some work together? Just [book me](https://book-me.sika.io) :)
+Wanna go for a beer or do some work together? Just [book me](https://book-me.sika.io) :)
 
 ## Training Sessions
 
