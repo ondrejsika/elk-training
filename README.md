@@ -41,11 +41,15 @@ Write me mail to <ondrej@sika.io>
 
 <https://ondrej-sika.cz/devopslive>
 
+<!--
+
 ## DevOps Kniha (Czech only)
 
 [![](./images/devops_kniha.jpg)](https://kniha.sika.io)
 
 <https://kniha.sika.io>
+
+-->
 
 ## Star, Create Issues, Fork, and Contribute
 
