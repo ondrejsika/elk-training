@@ -14,7 +14,7 @@
         state: present
     - name: Add Repository
       apt_repository:
-        repo: deb https://artifacts.elastic.co/packages/8.x/apt stable main
+        repo: deb https://artifacts.elastic.co/packages/9.x/apt stable main
         state: present
 
 - name: Install Elasticsearch
@@ -24,7 +24,7 @@
   tasks:
     - name: Install Elasticsearch
       apt:
-        name: elasticsearch
+        name: elasticsearch=9.5.5
         state: present
         update_cache: yes
     - name: Enable Elasticsearch
@@ -39,7 +39,7 @@
   tasks:
     - name: Install Kibana
       apt:
-        name: kibana
+        name: kibana=9.5.5
         state: present
         update_cache: yes
     - name: Enable Kibana
