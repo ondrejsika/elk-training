@@ -132,11 +132,11 @@ sudo apt-get install apt-transport-https
 ```
 
 ```
-echo "deb [signed-by=/usr/share/keyrings/elasticsearch-keyring.gpg] https://artifacts.elastic.co/packages/8.x/apt stable main" | sudo tee /etc/apt/sources.list.d/elastic-8.x.list
+echo "deb [signed-by=/usr/share/keyrings/elasticsearch-keyring.gpg] https://artifacts.elastic.co/packages/9.x/apt stable main" | sudo tee /etc/apt/sources.list.d/elastic-9.x.list
 ```
 
 ```
-sudo apt-get update && sudo apt-get install elasticsearch
+sudo apt-get update && sudo apt-get install elasticsearch=9.5.5
 ```
 
 Initial node
@@ -184,7 +184,7 @@ sudo /bin/systemctl enable elasticsearch.service --now
 Install Kibana
 
 ```
-sudo apt-get update && sudo apt-get install kibana
+sudo apt-get update && sudo apt-get install kibana=9.5.5
 ```
 
 Listen on all interfaces (`server.host`) in `/etc/kibana/kibana.yml`
