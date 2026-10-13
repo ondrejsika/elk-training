@@ -313,8 +313,8 @@ See:
 Test it:
 
 ```
-export ELASTIC_PASSWORD=$(kubectl -n elk get secret main-es-elastic-user -o=jsonpath='{.data.elastic}' | base64 --decode)
-filebeat -c `pwd`/filebeat/filebeat-k8s-test.yml -e
+export ELASTIC_PASSWORD=$(kubectl -n elk get secret elk-es-elastic-user -o=jsonpath='{.data.elastic}' | base64 --decode)
+filebeat -c $(pwd)/examples/filebeat/filebeat-k8s-test.yml -e
 ```
 
 #### Upgrade to Elasticsearch Cluster
