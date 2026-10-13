@@ -13,3 +13,6 @@ filebeat-verbose:
 
 filebeat-loggen:
 	slu loggen | filebeat -c $(shell pwd)/filebeat.yml
+
+enroll-token:
+	docker compose exec elasticsearch bin/elasticsearch-create-enrollment-token -s kibana
