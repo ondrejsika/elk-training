@@ -320,7 +320,7 @@ filebeat -c $(pwd)/examples/filebeat/filebeat-k8s-test.yml -e
 #### Upgrade to Elasticsearch Cluster
 
 ```
-kubectl get -f ./examples/k8s/elk_cluster
+kubectl apply -f ./examples/k8s/elk_cluster
 ```
 
 Wait until Elasticsearch and Kibana will be GREEN
