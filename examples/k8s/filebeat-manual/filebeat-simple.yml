@@ -21,9 +21,9 @@ data:
 
     output.elasticsearch:
       hosts:
-        - http://main-es-http.elk-single-node:9200
+        - http://elk-es-http.elk:9200
       username: elastic
-      password: fQJ8qnE034jk21QE2500WfVZ
+      password: elastic
 ---
 apiVersion: apps/v1
 kind: DaemonSet
