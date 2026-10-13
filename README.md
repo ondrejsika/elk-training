@@ -18,7 +18,6 @@ Write me mail to <ondrej@sika.io>
 - [Kubernetes Training in Czech Republic](https://ondrej-sika.cz/skoleni/kubernetes)
 - [Loki Training in Czech Republic](https://ondrej-sika.cz/skoleni/loki) (Log management in Grafana)
 - [Kubernetes Training in Europe & Middle East](https://ondrej-sika.com/training/kubernetes)
-- [Loki Training in Europe & Middle East](https://ondrej-sika.com/training/kubernetes) (Log management in Grafana)
 
 ## Related repositories
 
