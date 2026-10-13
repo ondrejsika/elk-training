@@ -5,7 +5,7 @@ metadata:
   namespace: elk
 spec:
   type: filebeat
-  version: 9.0.1
+  version: 9.5.5
   elasticsearchRef:
     name: elk
   config:

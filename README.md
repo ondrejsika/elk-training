@@ -373,8 +373,8 @@ brew install elastic/tap/filebeat-full
 ### Debian
 
 ```
-curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-9.0.1-amd64.deb
-sudo dpkg -i filebeat-9.0.1-amd64.deb
+curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-9.5.5-amd64.deb
+sudo dpkg -i filebeat-9.5.5-amd64.deb
 ```
 
 or using `slu`:
