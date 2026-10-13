@@ -12,7 +12,8 @@ data:
     - type: container
       paths:
         - /var/log/containers/*.log
-    - type: log
+    - type: filestream
+      id: varlog
       paths:
         - /var/log/*.log
 

@@ -1,5 +1,6 @@
 filebeat.inputs:
-  - type: log
+  - type: filestream
+    id: default-log
     paths:
       - /tmp/default.log
 

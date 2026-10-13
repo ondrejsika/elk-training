@@ -452,7 +452,7 @@ kubectl run logs-generator \
 
 #### From file
 
-[Docs](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-input-log.html)
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-input-filestream.html)
 
 Run `slu loggen`
 

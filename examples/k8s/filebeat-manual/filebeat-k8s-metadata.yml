@@ -18,7 +18,8 @@ data:
             matchers:
             - logs_path:
                 logs_path: "/var/log/containers/"
-    - type: log
+    - type: filestream
+      id: varlog
       paths:
         - /var/log/*.log
 
