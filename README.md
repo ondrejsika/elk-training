@@ -257,8 +257,8 @@ See:
 #### Elastic Cloud on Kubernetes
 
 - Intro - https://www.elastic.co/elastic-cloud-kubernetes
-- Docs / Tutorial - https://www.elastic.co/guide/en/cloud-on-examples/k8s/current/index.html
-- Deploy ECK - https://www.elastic.co/guide/en/cloud-on-examples/k8s/current/k8s-deploy-eck.html
+- Docs / Tutorial - https://www.elastic.co/docs/deploy-manage/deploy/cloud-on-k8s
+- Deploy ECK - https://www.elastic.co/docs/deploy-manage/deploy/cloud-on-k8s/deploy-an-orchestrator
 - Github - https://github.com/elastic/cloud-on-k8s
 
 #### Install ECK
@@ -500,7 +500,7 @@ filebeat -c $(pwd)/examples/filebeat/filebeat-input-container.yml -e
 
 #### File
 
-[Docs](https://www.elastic.co/guide/en/beats/filebeat/current/console-output.html)
+[Docs](https://www.elastic.co/guide/en/beats/filebeat/current/file-output.html)
 
 ```
 slu loggen | filebeat -c $(pwd)/examples/filebeat/filebeat-output-file.yml -e
