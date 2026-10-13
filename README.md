@@ -35,11 +35,15 @@ Write me mail to <ondrej@sika.io>
 - Cloud & On-Premise
 - Technologies: Git, Gitlab, Gitlab CI, Docker, Kubernetes, Terraform, Prometheus, ELK / EFK, Rancher, Proxmox, DigitalOcean, AWS
 
+<!--
+
 ## DevOps Live (Czech only)
 
 [![](./images/devopslive_argocd.jpg)](https://ondrej-sika.cz/devopslive)
 
 <https://ondrej-sika.cz/devopslive>
+
+-->
 
 <!--
 
