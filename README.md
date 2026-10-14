@@ -74,6 +74,7 @@ For sharing links & "secrets".
 ## Agenda
 
 - Introduction to ELK
+  - Elasticsearch Concepts (indices, data streams, shards, replicas, ...)
 - Install Elasticsearch & Kibana
   - Debian
   - Using Docker
@@ -99,6 +100,52 @@ For sharing links & "secrets".
 [What is Elasticsearch (Docs)](https://www.elastic.co/guide/en/elasticsearch/reference/current/elasticsearch-intro.html)
 
 Elasticsearch is the distributed search and analytics engine at the heart of the Elastic Stack. Beats facilitate collecting, aggregating, and enriching your data and storing it in Elasticsearch. Kibana enables you to interactively explore, visualize, and share insights into your data and manage and monitor the stack. Elasticsearch is where the indexing, search, and analysis magic happens.
+
+### Elasticsearch Concepts
+
+- **Cluster** - group of Elasticsearch nodes working together, identified by a cluster name
+- **Node** - single Elasticsearch instance (process). Nodes have roles, eg.:
+  - `master` - manages the cluster state (indices, mappings, shard allocation)
+  - `data` (`data_hot`, `data_warm`, `data_cold`, ...) - stores data and executes queries
+  - `ingest` - preprocesses documents using ingest pipelines
+- **Document** - single JSON object (eg. one log line), the basic unit of data
+- **Index** - collection of documents, similar to a table in SQL database
+- **Mapping** - schema of an index, defines fields and their types (`keyword`, `text`, `date`, `long`, ...)
+- **Shard** - index is split into shards, every shard is a self-contained Lucene index. Shards allow to distribute data and load across multiple nodes.
+  - **Primary shard** - every document is stored in exactly one primary shard. Number of primary shards is set on index creation.
+  - **Replica shard** - copy of a primary shard. Provides high availability (a replica is never on the same node as its primary) and increases search throughput. Number of replicas can be changed anytime.
+- **Index Template** - settings & mappings automatically applied to new indices matching a pattern (eg. `logs-*`)
+- **Data Stream** - append-only abstraction for time series data (logs, metrics). You write to and search one name (eg. `logs-nginx-default`), Elasticsearch stores data in hidden **backing indices** (`.ds-logs-nginx-default-2026.10.14-000001`). Documents must contain `@timestamp` field.
+- **Rollover** - creates a new backing index when the current one is too big or too old (eg. 50GB or 30 days). Only the newest backing index is written to.
+- **ILM (Index Lifecycle Management)** - policy which moves indices between phases (hot → warm → cold → frozen → delete), eg. delete logs older than 30 days
+- **Alias** - alternative name pointing to one or more indices
+
+Example of index with 3 primary shards and 1 replica on 3 nodes:
+
+```
+node-1        node-2        node-3
+[P0] [R2]     [P1] [R0]     [P2] [R1]
+```
+
+If any one node fails, all data is still available.
+
+#### Cluster Health
+
+- `green` - all primary and replica shards are allocated
+- `yellow` - all primary shards are allocated, but some replicas are not (eg. single node cluster with `number_of_replicas: 1`)
+- `red` - some primary shards are not allocated, some data is unavailable
+
+#### Useful API calls
+
+```
+GET _cluster/health
+GET _cat/nodes?v
+GET _cat/indices?v
+GET _cat/shards?v
+GET _data_stream
+GET _index_template
+GET _ilm/policy
+```
 
 ### Kibana Overview
 
