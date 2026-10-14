@@ -9,6 +9,7 @@ processors:
   - add_tags:
       tags:
         - training-example
+        - dissect-example
   - if:
       regexp:
         message: "^loggen"
