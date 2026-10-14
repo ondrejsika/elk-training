@@ -338,6 +338,8 @@ See:
 
 See: https://github.com/ondrejsika/argocd-apps-public/tree/master/clusters/elastic
 
+Deployed to https://es.elastic.sikademo.com and https://kb.elastic.sikademo.com
+
 ## User Management
 
 ## User Management using Terraform
