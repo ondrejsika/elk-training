@@ -12,9 +12,9 @@ setup.template.name: "logs"
 setup.template.pattern: "logs-*"
 
 output.elasticsearch:
-  hosts: ["https://es.k8s.sikademo.com:443"]
+  hosts: ["http://es.k8s.sikademo.com:443"]
   username: elastic
-  password: elastic
+  password: ${ELASTIC_PASSWORD:elastic}
 
   index: "logs-default-%{[agent.version]}-%{+yyyy.MM.dd}"
 

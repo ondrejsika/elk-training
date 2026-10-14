@@ -14,5 +14,5 @@ setup.template.pattern: "logs-*"
 output.elasticsearch:
   hosts: ["https://es.k8s.sikademo.com:443"]
   username: elastic
-  password: elastic
+  password: ${ELASTIC_PASSWORD:elastic}
   index: "logs-%{[message_json.level]}-%{[message_json.pet_kind]}"
