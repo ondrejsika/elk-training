@@ -18,7 +18,8 @@ processors:
           labels:
             message_type: loggen-text
       - dissect:
-          tokenizer: "%{module} %{date} %{time} %{level} %{message} (i=%{i|integer})"
+          # loggen 2026/10/13 12:37:43 DEBUG This is a debug log that shows a log that can be ignored. i=28 pet_kind=rat pet_name=Debie
+          tokenizer: "%{module} %{date} %{time} %{level} %{message} i=%{i|integer} pet_kind=%{pet_kind} pet_name=%{pet_name}"
           field: "message"
           target_prefix: "dissect.loggen"
   - if:
