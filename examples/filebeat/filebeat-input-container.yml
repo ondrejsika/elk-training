@@ -1,7 +1,11 @@
 filebeat.inputs:
-  - type: container
+  - type: filestream
     paths:
-      - "/var/lib/docker/containers/*/*.log"
+      - /var/lib/docker/containers/*/*.log
+    parsers:
+      - container: ~
+    processors:
+      - add_docker_metadata:
 
 output.elasticsearch:
   hosts:
