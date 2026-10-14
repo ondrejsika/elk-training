@@ -10,7 +10,9 @@ terraform {
 variable "elasticstack_elasticsearch_endpoint" {
   default = "https://es.k8s.sikademo.com"
 }
-variable "elasticstack_elasticsearch_password" {}
+variable "elasticstack_elasticsearch_password" {
+  default = "elastic"
+}
 
 provider "elasticstack" {
   elasticsearch {
@@ -24,7 +26,10 @@ resource "elasticstack_elasticsearch_security_role" "read" {
   name = "read"
 
   indices {
-    names      = ["filebeat-*"]
+    names      = [
+      "filebeat-*",
+      "logs-*",
+    ]
     privileges = ["read"]
   }
 
