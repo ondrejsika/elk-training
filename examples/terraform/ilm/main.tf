@@ -10,7 +10,9 @@ terraform {
 variable "elasticstack_elasticsearch_endpoint" {
   default = "https://es.k8s.sikademo.com"
 }
-variable "elasticstack_elasticsearch_password" {}
+variable "elasticstack_elasticsearch_password" {
+  default = "elastic"
+}
 
 provider "elasticstack" {
   elasticsearch {
