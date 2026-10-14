@@ -334,6 +334,10 @@ See:
 - https://es.k8s.sikademo.com
 - https://kb.k8s.sikademo.com
 
+## Full Kubernetes Example using ArgoCD
+
+See: https://github.com/ondrejsika/argocd-apps-public/tree/master/clusters/elastic
+
 ## User Management
 
 ## User Management using Terraform
