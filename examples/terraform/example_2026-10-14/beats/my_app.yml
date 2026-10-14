@@ -1,0 +1,15 @@
+filebeat.inputs:
+  - type: stdin
+
+output.elasticsearch:
+  hosts:
+    - https://es.k8s.sikademo.com:443
+  username: my-app-wo
+  password: asdfasdf
+
+  index: "logs-my-app"
+  pipeline: my-app
+
+setup.ilm.enabled: false
+setup.template.name: logs-my-app
+setup.template.pattern: "logs-my-app-*"
