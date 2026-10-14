@@ -1,0 +1,8 @@
+filebeat.inputs:
+  - type: stdin
+
+output.elasticsearch:
+  hosts: ["https://192.168.54.54:9200"]
+  username: elastic
+  password: ${ELASTIC_PASSWORD:elastic}
+  ssl.verification_mode: "none"
