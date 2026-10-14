@@ -7,7 +7,7 @@ processors:
   - dissect:
       tokenizer: "%{prefix} %{date} %{time} %{level} %{message} (i=%{i|integer})"
       field: "message"
-      target_prefix: "dissect"
+      target_prefix: "message_dissect"
 
 output.elasticsearch:
   hosts:
