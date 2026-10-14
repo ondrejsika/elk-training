@@ -1,0 +1,27 @@
+filebeat.inputs:
+  - type: stdin
+
+processors:
+  - decode_json_fields:
+      fields:
+        - message
+      target: "message_json"
+      add_error_key: true
+
+setup.template.name: "logs"
+setup.template.pattern: "logs-*"
+
+output.elasticsearch:
+  hosts: ["https://es.k8s.sikademo.com:443"]
+  username: elastic
+  password: elastic
+
+  index: "logs-default-%{[agent.version]}-%{+yyyy.MM.dd}"
+
+  indices:
+    - index: "logs-warning-%{[agent.version]}-%{+yyyy.MM.dd}"
+      when.contains:
+        message: "WARN"
+    - index: "logs-error-%{[agent.version]}-%{+yyyy.MM.dd}"
+      when.contains:
+        message: "ERR"
